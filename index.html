@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sparkfit Agency</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ==================== Navbar ==================== */
+        .navbar {
+            padding: 0.5rem 2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            width: auto;
+        }
+
+        /* Navbar links as pill buttons */
+        .navbar-nav .nav-item {
+            margin: 0 5px;
+        }
+
+        .navbar-nav .nav-link {
+            background-color: #e6e6e6;
+            /* light gray background */
+            color: #000 !important;
+            /* black text */
+            border-radius: 50px;
+            padding: 12px 25px;
+            min-width: 150px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        /* Active link gradient */
+        .navbar-nav .nav-link.active {
+            background: linear-gradient(90deg, black);
+            color: #fff !important;
+        }
+
+        /* Hover effect */
+        .navbar-nav .nav-link:hover {
+            background-color: #d4d4d4;
+            color: #000 !important;
+        }
+
+        /* Dropdown styles */
+        .dropdown-menu {
+            border-radius: 50px;
+            padding: 10px 0;
+            min-width: 220px;
+        }
+
+        .dropdown-item {
+            border-radius: 50px;
+            margin: 5px 15px;
+            padding: 8px 20px;
+            transition: all 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .contact-btn {
+            background-color: #000;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #333;
+        }
+
+        /* ==================== Hero Section ==================== */
+        .hero-section {
+            position: relative;
+            min-height: 75vh;
+            margin: 0 2rem 2rem 2rem;
+            border-radius: 20px;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* ensures video covers entire section */
+            z-index: 1;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+            /* content above the video */
+        }
+
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(90deg, #b01eff, #ff007a);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 32px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-light {
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 500;
+            color: #000;
+            border: 2px solid #000;
+            background-color: transparent;
+        }
+
+        .btn-outline-light:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.9;
+        }
+
+        /* ==================== Responsive ==================== */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 50px;
+            }
+
+            .hero-section {
+                margin: 0 1rem 2rem 1rem;
+                padding: 4rem 1.5rem;
+                min-height: 50vh;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                min-width: 100%;
+                margin: 5px 0;
+            }
+
+            .dropdown-item {
+                min-width: 90%;
+                margin: 5px auto;
+            }
+        }
+
+        /* ==================== Buttons (Modern Style) ==================== */
+        .btn-modern {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            border-radius: 50px;
+            font-weight: 500;
+            padding: 10px 18px 10px 22px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Inner circle for arrow icon */
+        .btn-modern .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        /* Filled Button (White background + Purple circle) */
+        .btn-modern.filled {
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-modern.filled .circle {
+            background: linear-gradient(135deg, #b01eff, #ff007a);
+            color: #fff;
+        }
+
+        .btn-modern.filled:hover .circle {
+            transform: rotate(45deg);
+        }
+
+        /* Outline Button (Transparent + White circle) */
+        .btn-modern.outline {
+            border: 2px solid #fff;
+            color: #fff;
+            background: transparent;
+        }
+
+        .btn-modern.outline .circle {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .btn-modern.outline:hover .circle {
+            transform: rotate(45deg);
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ==================== Navbar Toggler (iOS Style) ==================== */
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+            position: relative;
+            width: 35px;
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .navbar-toggler span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+        }
+
+        .navbar-toggler.collapsed span:nth-child(1) {
+            transform: rotate(0) translate(0, 0);
+        }
+
+        .navbar-toggler.collapsed span:nth-child(2) {
+            opacity: 1;
+        }
+
+        .navbar-toggler.collapsed span:nth-child(3) {
+            transform: rotate(0) translate(0, 0);
+        }
+
+        .navbar-toggler:not(.collapsed) span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .navbar-toggler:not(.collapsed) span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navbar-toggler:not(.collapsed) span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ==================== CTA Gradient Section ==================== */
+        #cta-section {
+            margin: 0 2rem;
+        }
+
+        #cta-section .cta-box {
+            background: linear-gradient(90deg, #6a11cb 0%, #ff0055 100%);
+            padding: 24px 40px;
+            border-radius: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            width: 100%;
+        }
+
+        #cta-section h4 {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .cta-btn {
+            background: #fff;
+            color: #000;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            color: #6a11cb;
+            transform: translateY(-2px);
+        }
+
+        .arrow-circle {
+            background: #A12161;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover .arrow-circle {
+            background: #ff0055;
+            transform: rotate(45deg);
+        }
+
+        @media (max-width: 768px) {
+            #cta-section {
+                margin: 0 1rem;
+            }
+
+            #cta-section .cta-box {
+                padding: 20px;
+            }
+
+            #cta-section h4 {
+                font-size: 1rem;
+            }
+
+            .cta-btn {
+                padding: 8px 16px;
+            }
+        }
+
+        /* ==================== How can we help your business ==================== */
+        section.py-2.text-center.bg-white h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+
+        .hero-gif img {
+            max-width: 400px;
+            /* or whatever fits nicely */
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Reduce space between Hero and CTA section */
+        .hero-section {
+            margin-bottom: 1rem !important;
+            /* Reduced gap */
+            padding-bottom: 2rem;
+            /* Slightly tighter bottom padding */
+        }
+
+        #cta-section {
+            margin-top: 0 !important;
+            /* No extra gap on top */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/Assets/Logo.png" alt="Sparkfit Agency Logo">
+            </a>
+
+            <!-- Custom Hamburger -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+
+                    <!-- Digital Marketing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Digital Marketing
+                        </a>
+                        <ul class="dropdown-menu rounded-4 shadow-sm">
+                            <li><a class="dropdown-item" href="#">Search Engine Optimization (SEO)</a></li>
+                            <li><a class="dropdown-item" href="#">Social Media Marketing (SMMA)</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing Automation</a></li>
+                            <li><a class="dropdown-item" href="#">Content Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Performance Marketing</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Design & Dev Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Design & Dev
+                        </a>
+                        <ul class="dropdown-menu rounded-4 shadow-sm">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="contact-btn ms-auto d-none d-lg-inline-block">Contact</a>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline
+            class="hero-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+            <source src="/Assets/0_Robot_Hand_3840x2160.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content -->
+        <div class="container text-start position-relative z-2">
+            <h1 class="hero-title text-uppercase">Boosting Business<br>Growth Speedily</h1>
+            <p class="hero-text mb-3">
+                AI-Powered Digital Marketing Agency – Guaranteed Growth in
+                <strong>60–90 Days</strong> or You Don’t Pay
+            </p>
+
+            <div class="d-flex gap-3 flex-wrap mb-4">
+                <a href="#" class="btn-modern filled ai-glow">
+                    <span>Get in Touch</span>
+                    <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+
+                <a href="#" class="btn-modern outline">
+                    <span>Contact</span>
+                    <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ====== CTA Gradient Section (Full Width Like Banner) ====== -->
+    <section id="cta-section" class="px-0 mb-5">
+        <div
+            class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
+            <h4 class="mb-3 mb-md-0 text-white fw-normal">
+                Convert More Leads, Faster – in Just 60–90 Days With our
+                <strong>Signature Funnel System</strong>
+            </h4>
+            <a href="#contact" class="cta-btn">
+                Get in Touch
+                <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Section: How can we help your business -->
+    <section class="py-2 text-center bg-white">
+        <div class="container">
+            <h1 class="fw-bold">How can we help your business?</h1>
+            <img src="/Assets/How can we help your business.png" alt="How can we help your business"
+                class="img-fluid mt-4">
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
