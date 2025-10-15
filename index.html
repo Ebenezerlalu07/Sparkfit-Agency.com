@@ -96,7 +96,7 @@
         /* ==================== Hero Section ==================== */
         .hero-section {
             position: relative;
-            min-height: 75vh;
+            min-height: 88vh;
             margin: 0 2rem 2rem 2rem;
             border-radius: 20px;
             overflow: hidden;
@@ -903,7 +903,7 @@ Streamline Workflow -->
         <div class="container">
             <h1 class="fw-bold triangle">That is How we
                 Streamline Workflow</h1>
-            <img src="/Assets/That is How.png" alt="How can we help your business" class="rounded-4 img-fluid mt-4">
+            <img src="/Assets/infographic_11.png" alt="How can we help your business" class="rounded-4 img-fluid mt-4">
         </div>
     </section>
 
@@ -1062,65 +1062,149 @@ Streamline Workflow -->
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="pt-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="footer-logo">
-                            <img src="Assets/Logo With clr.png" alt="Sparkfit Agency Logo" class="img-fluid">
-                        </div>
-                        <p class="mt-3">Empowering enterprise transformation with innovation, precision, and measurable
-                            impact.</p>
-                    </div>
 
-                    <div class="col-md-2 mb-4 footer-links">
-                        <h6 class="fw-bold">Company</h6>
-                        <a href="#">About us</a>
-                        <a href="#">Services</a>
-                        <a href="#">Deliver</a>
-                        <a href="#">Resources</a>
-                    </div>
-
-                    <div class="col-md-2 mb-4 footer-links">
-                        <h6 class="fw-bold">Legal</h6>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms Of Use</a>
-                    </div>
-
-                    <div class="col-md-2 mb-4 footer-links">
-                        <h6 class="fw-bold">Our communities</h6>
-                        <a href="#">MM Communities</a>
-                        <a href="#">MM Forum</a>
-                        <a href="#">MM Chat</a>
-                    </div>
-
-                    <div class="col-md-2 mb-4">
-                        <h6 class="fw-bold">Contact</h6>
-                        <p><a href="tel:+19494145420" class="text-white text-decoration-none">+1 949 414 5420</a></p>
-                        <p><a href="mailto:hello@sparkfitagency.com"
-                                class="text-white text-decoration-none">hello@sparkfitagency.com</a></p>
-                        <div class="social-icons mt-3">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+        <!-- Footer Section -->
+        <footer class="footer-section text-white position-relative">
+            <div class="container position-relative py-5">
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                        <h1 class="fw-bold display-5 mb-3">Let's boost your<br>business,<br>together</h1>
+                        <p class="small mb-4">
+                            We are a transformative AI-Technology company helping the world solve
+                            complex business problems with innovative and cost-effective solutions.
+                        </p>
+                        <nav class="mb-3">
+                            <a href="#" class="text-white text-decoration-none me-3 fw-semibold">Home</a>
+                            <a href="#" class="text-white text-decoration-none me-3 fw-semibold">Digital Marketing</a>
+                            <a href="#" class="text-white text-decoration-none me-3 fw-semibold">Design&Dev</a>
+                            <a href="#" class="text-white text-decoration-none me-3 fw-semibold">About</a>
+                            <a href="#" class="text-white text-decoration-none fw-semibold">Contact</a>
+                        </nav>
                     </div>
                 </div>
 
                 <!-- Footer Bottom -->
-                <div class="row footer-bottom mt-4">
-                    <div class="col-md-6">
-                        <p>© 2025 Sparkfit Agency</p>
+                <div class="text-center mt-4 pt-3 border-top border-light">
+                    <div class="d-flex justify-content-center mb-2">
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-x-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
-                        <a href="#" class="text-white text-decoration-none me-3">Terms of Use</a>
-                    </div>
-                </div><br>
+                    <p class="small mb-0">© 2025 Sparkfit Agency. All Rights Reserved.</p>
+                </div>
+            </div>
+
+            <!-- Right Image (3D effect) -->
+            <div class="robot-img-container">
+                <img src="Assets/robot.png" alt="AI Robot" class="robot-img">
             </div>
         </footer>
+
+        <!-- Custom CSS -->
+        <style>
+            /* Animated gradient background */
+            @keyframes gradientAnimation {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            .footer-section {
+                position: relative;
+                overflow: hidden;
+                padding-right: 0;
+                background: linear-gradient(270deg, #6a11cb, #ff0066, #00c6ff, #f5af19);
+                background-size: 800% 800%;
+                animation: gradientAnimation 20s ease infinite;
+                /* infinite loop gradient */
+            }
+
+            /* Robot Image container */
+            .robot-img-container {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30%;
+                height: 100%;
+                z-index: 1;
+                overflow: hidden;
+                perspective: 1000px;
+                /* 3D perspective */
+            }
+
+            .robot-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: rotateY(-15deg) rotateX(5deg) scale(1.05);
+                /* subtle 3D effect */
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                /* shadow for depth */
+                transition: transform 0.5s ease;
+            }
+
+            .robot-img-container:hover .robot-img {
+                transform: rotateY(0deg) rotateX(0deg) scale(1.1);
+                /* hover pop effect */
+            }
+
+            /* Ensure text is above image */
+            .footer-section .container {
+                position: relative;
+                z-index: 2;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 991.98px) {
+                .robot-img-container {
+                    position: relative;
+                    width: 100%;
+                    height: 300px;
+                    top: auto;
+                    margin-top: 20px;
+                    perspective: none;
+                }
+
+                .robot-img {
+                    transform: none;
+                    box-shadow: none;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                .footer-section h1 {
+                    font-size: 1.8rem;
+                    line-height: 1.3;
+                }
+
+                .footer-section p {
+                    font-size: 0.85rem;
+                    line-height: 1.4;
+                }
+
+                .footer-section nav a {
+                    display: block;
+                    margin-bottom: 6px;
+                    font-size: 0.85rem;
+                }
+            }
+            
+        </style>
+
+
+
+
+
     </section>
 
 
