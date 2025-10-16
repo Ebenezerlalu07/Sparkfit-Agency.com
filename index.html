@@ -44,29 +44,36 @@
 
 
         /* ==================== Navbar ==================== */
+        /* ==================== Navbar ==================== */
         .navbar {
-            padding: 0.5rem 2rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            padding: 0.25rem 1.5rem;
+            /* reduced top/bottom and left/right padding */
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+            /* slightly smaller font */
         }
 
+        /* Logo */
         .navbar-brand img {
-            height: 50px;
+            height: 40px;
+            /* smaller logo */
             width: auto;
         }
 
-        /* Navbar links as pill buttons */
+        /* Navbar links */
         .navbar-nav .nav-item {
-            margin: 0 5px;
+            margin: 0 4px;
+            /* less spacing between items */
         }
 
         .navbar-nav .nav-link {
             background-color: #e6e6e6;
-            /* light gray background */
             color: #000 !important;
-            /* black text */
             border-radius: 50px;
-            padding: 12px 25px;
-            min-width: 150px;
+            padding: 6px 15px;
+            /* reduced padding */
+            min-width: 120px;
+            /* smaller width */
             text-align: center;
             font-weight: 500;
             transition: all 0.3s;
@@ -83,7 +90,61 @@
             background-color: #d4d4d4;
         }
 
-        
+        /* Dropdown styles */
+        .dropdown-menu {
+            border-radius: 50px;
+            padding: 6px 0;
+            /* reduced padding */
+            min-width: 180px;
+            /* smaller width */
+            font-size: 0.85rem;
+            /* smaller text */
+        }
+
+        .dropdown-item {
+            border-radius: 50px;
+            padding: 6px 15px;
+            /* reduced padding */
+            transition: all 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Contact button */
+        .contact-btn {
+            background-color: #000;
+            color: #fff;
+            border-radius: 50px;
+            padding: 6px 15px;
+            /* reduced padding */
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #333;
+        }
+
+        /* Navbar toggler */
+        .navbar-toggler {
+            width: 30px;
+            height: 20px;
+        }
+
+        .navbar-toggler span {
+            height: 2px;
+            /* thinner bars */
+            width: 100%;
+            background-color: #000;
+            margin: 3px 0;
+        }
+
+
+
 
         /* Dropdown styles */
         .dropdown-menu {
