@@ -20,10 +20,28 @@
 
 
     <style>
+        /* Apply SF UI Text to the whole body */
         body {
-            background-color: #fff;
-            font-family: 'Inter', sans-serif;
+            font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            /* optional: adjust base font size */
+            line-height: 1.5;
+            /* optional: improves readability */
+            color: #333;
+            /* optional: text color */
         }
+
+        /* Make sure all paragraphs also inherit it */
+        p {
+            font-family: inherit;
+            margin-bottom: 1em;
+            /* optional spacing */
+        }
+
+        .text {
+            font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
 
         /* ==================== Navbar ==================== */
         .navbar {
@@ -32,7 +50,7 @@
         }
 
         .navbar-brand img {
-            height: 70px;
+            height: 50px;
             width: auto;
         }
 
@@ -64,6 +82,8 @@
         .navbar-nav .nav-link:hover {
             background-color: #d4d4d4;
         }
+
+        
 
         /* Dropdown styles */
         .dropdown-menu {
@@ -99,7 +119,7 @@
         /* ==================== Hero Section ==================== */
         .hero-section {
             position: relative;
-            min-height: 88vh;
+            min-height: 75vh;
             margin: 0 2rem 2rem 2rem;
             border-radius: 20px;
             overflow: hidden;
@@ -439,10 +459,10 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white">
+    <nav class="navbar navbar-expand-lg bg-white py-2 shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
-                <img src="/Assets/Logo.png" alt="Sparkfit Agency Logo">
+                <img src="/Assets/Logo.png" alt="Sparkfit Agency Logo" class="logo">
             </a>
 
             <!-- Custom Hamburger -->
@@ -464,8 +484,8 @@
                             Digital Marketing
                         </a>
                         <ul class="dropdown-menu rounded-4 shadow-sm">
-                            <li><a class="dropdown-item" href="#">Search Engine Optimization (SEO)</a></li>
-                            <li><a class="dropdown-item" href="#">Social Media Marketing (SMMA)</a></li>
+                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="#">SMMA</a></li>
                             <li><a class="dropdown-item" href="#">Marketing Automation</a></li>
                             <li><a class="dropdown-item" href="#">Content Marketing</a></li>
                             <li><a class="dropdown-item" href="#">Performance Marketing</a></li>
@@ -485,12 +505,11 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/about.html">About</a></li>
                 </ul>
             </div>
 
             <a href="#" class="contact-btn ms-auto d-none d-lg-inline-block">Contact</a>
-
         </div>
     </nav>
 
@@ -505,60 +524,7 @@
 
         <!-- Content -->
         <div class="container text-start position-relative z-2">
-            <h1 class="hero-title text-uppercase">
-                <span class="boosting" style="display: inline-block;">Boosting<br>Business</span><br>
-                Growth Speedily
-            </h1>
-            <style>
-                .hero-title {
-                    font-family: 'Orbitron', sans-serif;
-                    font-weight: 700;
-                    line-height: 1.2;
-                    text-transform: uppercase;
-                }
-
-                /* Desktop size */
-                .hero-title .boosting {
-                    font-size: 100px;
-                }
-
-                /* Mobile responsiveness */
-                @media (max-width: 1200px) {
-                    .hero-title .boosting {
-                        font-size: 80px;
-                    }
-                }
-
-                @media (max-width: 992px) {
-                    .hero-title .boosting {
-                        font-size: 60px;
-                    }
-                }
-
-                @media (max-width: 768px) {
-                    .hero-title .boosting {
-                        font-size: 45px;
-                    }
-
-                    .hero-title {
-                        font-size: 30px;
-                        /* for "Growth Speedily" text */
-                        text-align: left;
-                    }
-                }
-
-                @media (max-width: 576px) {
-                    .hero-title .boosting {
-                        font-size: 35px;
-                    }
-
-                    .hero-title {
-                        font-size: 25px;
-                    }
-                }
-            </style>
-
-
+            <h1 class="hero-title text-uppercase"><span>Boosting<br>Business</span><br>Growth Speedily</h1>
             <p class="hero-text mb-3">
                 AI-Powered Digital Marketing Agency – Guaranteed Growth in
                 <strong>60–90 Days</strong> or You Don’t Pay
@@ -1176,7 +1142,6 @@ Streamline Workflow -->
     <style>
         /* === Footer Section === */
         .footer-section {
-            height: 100%;
             position: relative;
             overflow: hidden;
             color: #fff;
@@ -1285,69 +1250,6 @@ Streamline Workflow -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Loader -->
-    <div id="page-loader" class="d-flex justify-content-center align-items-center">
-        <img src="Assets/Logo.png" alt="Logo" class="loader-logo">
-    </div>
-
-    <style>
-        /* Fullscreen loader */
-        #page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            /* White background */
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Slower heartbeat animation */
-        .loader-logo {
-            width: 120px;
-            height: auto;
-            animation: heartbeat 1.5s infinite;
-            /* slower animation */
-        }
-
-        /* Heartbeat keyframes */
-        @keyframes heartbeat {
-            0% {
-                transform: scale(1);
-            }
-
-            25% {
-                transform: scale(1.2);
-            }
-
-            50% {
-                transform: scale(1);
-            }
-
-            75% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
-
-    <script>
-        // Hide loader after page load
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("page-loader");
-            loader.style.opacity = '0';
-            loader.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => loader.style.display = 'none', 500);
-        });
-    </script>
-
 
 </body>
 
