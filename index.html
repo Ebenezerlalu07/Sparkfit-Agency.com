@@ -178,6 +178,54 @@
             background-color: #333;
         }
 
+        .hero-title span:first-child {
+            font-size: 5rem;
+        }
+
+        .hero-title span:last-child {
+            font-size: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title span:first-child {
+                font-size: 2rem;
+            }
+
+            .hero-title span:last-child {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title span:first-child {
+                font-size: 1.6rem;
+            }
+
+            .hero-title span:last-child {
+                font-size: 1.4rem;
+            }
+        }
+
+
+
+
+        /* Buttons responsive */
+        .btn-modern {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 576px) {
+            .btn-modern {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+
         /* ==================== Hero Section ==================== */
         .hero-section {
             position: relative;
@@ -576,22 +624,23 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
-        <!-- Video Background -->
-        <video autoplay muted loop playsinline
-            class="hero-video position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-            <source src="/Assets/0_Robot_Hand_3840x2160.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <section class="hero-section d-flex align-items-center position-relative overflow-hidden"
+        style="background: url('/Assets/Hero\ banner.png') center/cover no-repeat; min-height: 80vh;">
+
+        <!-- Optional overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.3);"></div>
 
         <!-- Content -->
-        <div class="container text-start position-relative z-2">
-            <h1 class="hero-title text-uppercase">
-                <span style="font-size: 1.9em;">Boosting<br>Business</span><br>
-                Growth Speedily
+        <div class="container text-start position-relative z-2 py-5">
+            <h1 class="hero-title text-uppercase mb-3" style="line-height: 1.1;">
+                <span style="font-size: 5rem;">Boosting<br>Business</span><br>
+                <span style="font-size: 2.5rem;">Growth Speedily</span>
             </h1>
 
-            <p class="hero-text mb-3">
+
+
+
+            <p class="hero-text mb-4" style="max-width: 600px; font-size: 1rem; line-height: 1.5;">
                 AI-Powered Digital Marketing Agency – Guaranteed Growth in
                 <strong>60–90 Days</strong> or You Don’t Pay
             </p>
@@ -609,6 +658,7 @@
             </div>
         </div>
     </section>
+
 
 
 
