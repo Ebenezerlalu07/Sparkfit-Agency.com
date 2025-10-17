@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sparkfit Agency</title>
 
+    <link rel="stylesheet" href="style.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -16,614 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #fff;
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Default (mobile & tablet): full width */
-        .custom-container {
-            width: 100%;
-            padding: 0 1.5rem;
-        }
-
-        /* Desktop (small width custom container) */
-        @media (min-width: 992px) {
-            .custom-container {
-                max-width: 950px;
-                /* 👈 smaller width for desktop */
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        /* Large desktop refinement */
-        @media (min-width: 1400px) {
-            .custom-container {
-                max-width: 1000px;
-                /* slightly wider for big screens */
-            }
-        }
-
-
-        /* ==================== Navbar ==================== */
-        /* ============ Navbar Base ============ */
-        .navbar {
-            padding: 0.35rem 1rem;
-            /* slightly more padding */
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            min-height: 65px;
-            /* balanced height */
-        }
-
-        /* Logo */
-        .navbar-brand img {
-            height: 50px;
-            /* slightly bigger */
-            width: auto;
-            transition: all 0.3s ease;
-        }
-
-        /* ============ Nav Links ============ */
-        .navbar-nav .nav-item {
-            margin: 0 4px;
-            /* standard spacing */
-        }
-
-        .navbar-nav .nav-link {
-            background-color: #f1f1f1;
-            color: #000 !important;
-            border-radius: 50px;
-            padding: 8px 20px;
-            /* slightly bigger to match contact button */
-            font-weight: 500;
-            font-size: 15px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .navbar-nav .nav-link.active,
-        .navbar-nav .nav-link:hover {
-            background-color: #000;
-            color: #fff !important;
-        }
-
-        /* ============ Dropdown Menu ============ */
-        .dropdown-menu {
-            border-radius: 25px;
-            padding: 8px 0;
-            min-width: 200px;
-        }
-
-        .dropdown-item {
-            border-radius: 25px;
-            padding: 8px 20px;
-            transition: all 0.3s;
-        }
-
-        .dropdown-item:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        /* ============ Contact Button ============ */
-        .contact-btn {
-            background-color: #000;
-            color: #fff;
-            border-radius: 50px;
-            padding: 8px 20px;
-            /* same height as nav links */
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-
-        .contact-btn:hover {
-            background-color: #333;
-        }
-
-        /* ============ Hamburger Animation ============ */
-        .navbar-toggler {
-            border: none;
-            background: transparent;
-            padding: 5px;
-        }
-
-        .navbar-toggler span {
-            display: block;
-            width: 25px;
-            height: 2px;
-            margin: 4px 0;
-            background: #000;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        /* ============ Responsive Adjustments ============ */
-        @media (max-width: 991px) {
-            .navbar-nav .nav-link {
-                background: transparent;
-                padding: 8px 15px;
-            }
-
-            .navbar-nav .dropdown-menu {
-                border-radius: 10px;
-            }
-
-            .contact-btn {
-                display: inline-block;
-                margin: 8px 0;
-                width: 100%;
-                text-align: center;
-                padding: 8px 0;
-                /* same as nav links */
-            }
-        }
-
-        @media (max-width: 575px) {
-            .navbar-brand img {
-                height: 40px;
-                /* mobile logo slightly bigger */
-            }
-        }
-
-
-        /* ============ Dropdown Menu ============ */
-        .dropdown-menu {
-            border-radius: 50px;
-            /* original rounded style */
-            padding: 10px 0;
-            /* original padding */
-            min-width: 220px;
-            /* wider dropdown */
-        }
-
-        .dropdown-item {
-            border-radius: 50px;
-            /* original rounded style */
-            padding: 8px 20px;
-            /* original padding */
-            transition: all 0.3s;
-        }
-
-        .dropdown-item:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        /* ============ Contact Button ============ */
-        /* ============ Contact Button ============ */
-        .contact-btn {
-            background-color: #000;
-            color: #fff;
-            border-radius: 50px;
-            padding: 8px 20px;
-            /* same as nav links */
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-
-        .contact-btn:hover {
-            background-color: #333;
-        }
-
-
-
-        /* ==================== Hero Section ==================== */
-        .hero-section {
-            position: relative;
-            height: 90vh;
-            /* 90% of viewport height */
-            margin: 0 2rem 2rem 2rem;
-            border-radius: 20px;
-            overflow: hidden;
-            color: #fff;
-            background-color: #000;
-            /* fallback for uncovered areas */
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* fills the hero section */
-            object-fit: cover;
-            /* scales image proportionally */
-            object-position: top;
-            /* optional: align top of image */
-            z-index: 1;
-        }
-
-        .hero-section .container {
-            position: relative;
-            z-index: 2;
-            /* content above background */
-        }
-
-
-
-
-        /* Hero content */
-        .hero-section .container {
-            position: relative;
-            z-index: 2;
-        }
-
-
-
-        .hero-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 5.3rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .text {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 5.3rem;
-            font-weight: 700;
-            line-height: 1.2;
-
-        }
-
-        /* Wrap the second line and third line together */
-        .line2-wrapper {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        /* Second line text */
-        .line2 {
-            width: max-content;
-        }
-
-        /* Third line text: shrink to match width of line2 */
-        .line3 {
-            font-size: 2.8rem;
-            /* smaller to fit */
-            width: fit-content;
-            /* match the text width */
-        }
-
-
-
-
-
-
-        .btn-gradient {
-            background: linear-gradient(90deg, #b01eff, #ff007a);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 14px 32px;
-            transition: all 0.3s;
-        }
-
-        .btn-outline-light {
-            border-radius: 50px;
-            padding: 14px 32px;
-            font-weight: 500;
-            color: #000;
-            border: 2px solid #000;
-            background-color: transparent;
-        }
-
-        .btn-outline-light:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .btn-gradient:hover {
-            opacity: 0.9;
-        }
-
-        /* ==================== Responsive ==================== */
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                height: 50px;
-            }
-
-            .hero-section {
-                margin: 0 1rem 2rem 1rem;
-                padding: 4rem 1.5rem;
-                min-height: 50vh;
-            }
-
-            .hero-title {
-                font-size: 2.4rem;
-            }
-
-            .navbar-nav {
-                text-align: center;
-            }
-
-            .navbar-nav .nav-link {
-                min-width: 100%;
-                margin: 5px 0;
-            }
-
-            .dropdown-item {
-                min-width: 90%;
-                margin: 5px auto;
-            }
-
-            .sub {
-                font-size: small;
-            }
-        }
-
-        /* ==================== Buttons (Modern Style) ==================== */
-        .btn-modern {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            border-radius: 50px;
-            font-weight: 500;
-            padding: 10px 18px 10px 22px;
-            font-size: 16px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        /* Inner circle for arrow icon */
-        .btn-modern .circle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        /* Filled Button (White background + Purple circle) */
-        .btn-modern.filled {
-            background-color: #fff;
-            color: #000;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-modern.filled .circle {
-            background: linear-gradient(135deg, #b01eff, #ff007a);
-            color: #fff;
-        }
-
-        .btn-modern.filled:hover .circle {
-            transform: rotate(45deg);
-        }
-
-        /* Outline Button (Transparent + White circle) */
-        .btn-modern.outline {
-            border: 2px solid #fff;
-            color: #fff;
-            background: transparent;
-        }
-
-        .btn-modern.outline .circle {
-            background-color: #fff;
-            color: #000;
-        }
-
-        .btn-modern.outline:hover .circle {
-            transform: rotate(45deg);
-        }
-
-        .btn-modern:hover {
-            transform: translateY(-2px);
-        }
-
-        /* ==================== Navbar Toggler (iOS Style) ==================== */
-
-        /* ============ Hamburger Icon ============ */
-        .navbar-toggler {
-            border: none;
-            background: transparent;
-            padding: 5px;
-            z-index: 1051;
-            /* ensure it’s above other elements */
-        }
-
-        .navbar-toggler span {
-            display: block;
-            width: 25px;
-            /* slightly wider for visibility */
-            height: 3px;
-            /* thicker for visibility */
-            margin: 5px 0;
-            /* spacing between lines */
-            /* black lines */
-            border-radius: 3px;
-            transition: all 0.3s;
-        }
-
-        /* Hamburger animation */
-        .navbar-toggler.collapsed span:nth-child(1) {
-            transform: rotate(0) translateY(0);
-        }
-
-        .navbar-toggler.collapsed span:nth-child(2) {
-            opacity: 1;
-        }
-
-        .navbar-toggler.collapsed span:nth-child(3) {
-            transform: rotate(0) translateY(0);
-        }
-
-        .navbar-toggler:not(.collapsed) span:nth-child(1) {
-            transform: rotate(45deg) translateY(8px);
-        }
-
-        .navbar-toggler:not(.collapsed) span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .navbar-toggler:not(.collapsed) span:nth-child(3) {
-            transform: rotate(-45deg) translateY(-8px);
-        }
-
-        /* Navbar links as pill buttons */
-        .navbar-nav .nav-link {
-            background-color: #e6e6e6;
-            /* light gray background */
-            color: #000 !important;
-            /* text color */
-            border-radius: 50px;
-            padding: 8px 25px;
-            /* horizontal padding increased */
-            min-width: 160px;
-            /* wider than before */
-            text-align: center;
-            font-weight: 500;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-
-        /* Active link gradient or dark background */
-        .navbar-nav .nav-link.active {
-            background: linear-gradient(90deg, #000, #000);
-            color: #fff !important;
-        }
-
-        /* Hover effect */
-        .navbar-nav .nav-link:hover {
-            background-color: #d4d4d4;
-        }
-
-
-        /* ==================== CTA Gradient Section ==================== */
-        #cta-section {
-            margin: 0 2rem;
-        }
-
-        /* Default heading style (for desktop) */
-        .triangle {
-            font-size: 2.5rem;
-            /* adjust as needed */
-        }
-
-        /* Smaller heading for mobile */
-        @media (max-width: 576px) {
-            .triangle {
-                font-size: 1.5rem;
-                /* smaller font size on mobile */
-            }
-        }
-
-        #cta-section .cta-box {
-            background: linear-gradient(90deg, #6a11cb 0%, #ff0055 100%);
-            padding: 20px 40px;
-            border-radius: 24px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            transition: all 0.4s ease;
-            width: 100%;
-        }
-
-        #cta-section h4 {
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-
-        .cta-btn {
-            background: #fff;
-            color: #000;
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            color: #6a11cb;
-            transform: translateY(-2px);
-        }
-
-        .arrow-circle {
-            background: #A12161;
-            color: #fff;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 10px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover .arrow-circle {
-            background: #ff0055;
-            transform: rotate(45deg);
-        }
-
-        @media (max-width: 768px) {
-            #cta-section {
-                margin: 0 1rem;
-            }
-
-            #cta-section .cta-box {
-                padding: 20px;
-            }
-
-            #cta-section h4 {
-                font-size: 1rem;
-            }
-
-            .cta-btn {
-                padding: 8px 16px;
-            }
-        }
-
-        /* ==================== How can we help your business ==================== */
-        section.py-2.text-center.bg-white h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: #000;
-        }
-
-
-
-        #cta-section {
-            margin-top: 0 !important;
-            /* No extra gap on top */
-        }
-
-        .carousel-item img {
-            object-fit: cover;
-            height: 550px;
-            width: 100%;
-            border-radius: 20px;
-        }
-
-        .carousel-caption {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            border-radius: 15px;
-        }
-
-        .carousel-caption h5 {
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .carousel-caption p {
-            font-size: 1.1rem;
-        }
-    </style>
 
 </head>
 
@@ -726,7 +120,7 @@
 
 
     <!-- ====== CTA Gradient Section (Full Width Like Banner) ====== -->
-    <section id="cta-section" class="px-0 mb-2">
+    <section id="cta-section" class=" px-0 mb-2">
         <div
             class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
             <h4 class="mb-3 mb-md-0 text-white fw-normal">
@@ -960,12 +354,13 @@
 
 
     <!-- SERVICES SECTION -->
-    <section class="py-5 bg-white">
+    <section class="services-section py-5 bg-white">
         <div class="container">
             <!-- Heading Row -->
             <div class="row mb-5 align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="fw-bold" style="font-family: 'Orbitron', sans-serif;">We Always Provide The Best Service
+                    <h2 class="fw-bold" style="font-family: 'Orbitron', sans-serif;">
+                        We Always Provide The Best Service
                     </h2>
                 </div>
                 <div class="col-lg-6 text-lg-end">
@@ -979,10 +374,9 @@
 
             <!-- Services Row -->
             <div class="row g-4">
-
                 <!-- Service 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0  h-100">
+                    <div class="service-card card border-0 h-100">
                         <img src="/Assets/Web Development.png" class="card-img-top rounded-4" alt="Web Development">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Web Development</h5>
@@ -995,7 +389,7 @@
 
                 <!-- Service 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0  h-100">
+                    <div class="service-card card border-0 h-100">
                         <img src="/Assets/Web Design.png" class="card-img-top rounded-4" alt="Web Design">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Web Design</h5>
@@ -1008,7 +402,7 @@
 
                 <!-- Service 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0  h-100">
+                    <div class="service-card card border-0 h-100">
                         <img src="/Assets/Mobile App Development.png" class="card-img-top rounded-4"
                             alt="Mobile App Development">
                         <div class="card-body">
@@ -1019,7 +413,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -1423,41 +816,45 @@ Streamline Workflow -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Loader -->
     <div id="loader">
         <img src="/Assets/Logo.png" alt="Logo" class="loader-logo">
     </div>
-    <script>
-        window.addEventListener('load', function () {
-            const loader = document.getElementById('loader');
-            loader.style.opacity = '0';  // fade out
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500); // match transition duration
-        });
-    </script>
+
     <style>
+        /* Reset default margin/padding */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
         /* Loader Styles */
         #loader {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            /* full viewport width */
+            height: 100vh;
+            /* full viewport height */
             background-color: #fff;
-            /* full screen white */
+            /* full-screen white */
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
             transition: opacity 0.5s ease;
+            pointer-events: all;
+            /* block interaction while loader visible */
         }
 
         /* Logo Heartbeat Animation */
         .loader-logo {
             width: 120px;
-            /* adjust size as needed */
             height: auto;
             animation: heartbeat 1s infinite;
         }
@@ -1469,19 +866,31 @@ Streamline Workflow -->
                 transform: scale(1);
             }
 
-            25% {
+            25%,
+            75% {
                 transform: scale(1.1);
             }
 
             50% {
                 transform: scale(1);
             }
-
-            75% {
-                transform: scale(1.1);
-            }
         }
     </style>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0'; // fade out
+
+            // Wait for transition to finish before hiding
+            loader.addEventListener('transitionend', () => {
+                loader.style.display = 'none';
+            });
+        });
+    </script>
+
+
+
 
 
 </body>
