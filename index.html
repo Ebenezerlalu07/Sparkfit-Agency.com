@@ -22,6 +22,31 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* Default (mobile & tablet): full width */
+        .custom-container {
+            width: 100%;
+            padding: 0 1.5rem;
+        }
+
+        /* Desktop (small width custom container) */
+        @media (min-width: 992px) {
+            .custom-container {
+                max-width: 950px;
+                /* 👈 smaller width for desktop */
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* Large desktop refinement */
+        @media (min-width: 1400px) {
+            .custom-container {
+                max-width: 1000px;
+                /* slightly wider for big screens */
+            }
+        }
+
+
         /* ==================== Navbar ==================== */
         /* ============ Navbar Base ============ */
         .navbar {
@@ -237,6 +262,14 @@
             font-size: 5.3rem;
             font-weight: 700;
             line-height: 1.2;
+        }
+
+        .text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5.3rem;
+            font-weight: 700;
+            line-height: 1.2;
+
         }
 
         /* Wrap the second line and third line together */
@@ -660,7 +693,7 @@
             class="hero-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
 
         <!-- Content -->
-        <div class="container text-start position-relative z-2">
+        <div class="custom-containe container text-start position-relative z-2">
             <h1 class="hero-title text-uppercase">
                 <span class="line1">Boosting</span><br>
                 <span class="line2-wrapper">
@@ -711,11 +744,16 @@
     <!-- Section: How can we help your business -->
     <section class="py-2 text-center bg-white">
         <div class="container">
-            <h1 class="fw-bold triangle">How can we help your business?</h1>
+            <h1 class="fw-bold triangle" style="font-size: 1.8rem; line-height: 1.3; margin-bottom: 1rem;">
+                How can we help your business?
+            </h1>
+
             <img src="/Assets/How can we help your business.png" alt="How can we help your business"
-                class="img-fluid mt-4">
+                class="img-fluid mt-3" style="width: 100%; max-width: 1000px; height: auto;">
         </div>
     </section>
+
+
 
 
 
@@ -1067,17 +1105,21 @@
 
     <!-- Section: That is How we 
 Streamline Workflow -->
-    <section class="py-2 text-center bg-white rounded-4">
+
+    <section class="py-2 text-center bg-white">
         <div class="container">
-            <h1 class="fw-bold triangle">That is How we
-                Streamline Workflow</h1>
-            <img src="/Assets/infographic_11.png" alt="How can we help your business" class="rounded-4 img-fluid mt-4">
+            <h1 class="fw-bold triangle" style="font-size: 1.8rem; line-height: 1.3; margin-bottom: 1rem;">
+                That is How we Streamline Workflow
+            </h1>
+
+            <img src="/Assets/infographic_11.png" alt="How can we help your business" class="img-fluid mt-3"
+                style="width: 100%; max-width: 1000px; height: auto;">
         </div>
     </section>
 
 
     <!-- Brands -->
-    <div class=" font container-fluid">
+    <div class="text font container-fluid">
         <div class=" section-title">Our Clients</div>
         <div class="fw-bold section-subtitle">Don't Take Our Word For It</div>
 
