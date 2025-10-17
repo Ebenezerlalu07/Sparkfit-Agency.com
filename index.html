@@ -234,23 +234,33 @@
 
         .hero-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.8rem;
+            font-size: 5.3rem;
             font-weight: 700;
             line-height: 1.2;
         }
 
-        .font {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.8rem;
-            font-weight: 700;
-            line-height: 1.2;
+        /* Wrap the second line and third line together */
+        .line2-wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        .hero-text {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
+        /* Second line text */
+        .line2 {
+            width: max-content;
         }
+
+        /* Third line text: shrink to match width of line2 */
+        .line3 {
+            font-size: 2.8rem;
+            /* smaller to fit */
+            width: fit-content;
+            /* match the text width */
+        }
+
+
+
 
 
 
@@ -476,7 +486,7 @@
 
         #cta-section .cta-box {
             background: linear-gradient(90deg, #6a11cb 0%, #ff0055 100%);
-            padding: 24px 40px;
+            padding: 20px 40px;
             border-radius: 24px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             transition: all 0.4s ease;
@@ -651,9 +661,18 @@
 
         <!-- Content -->
         <div class="container text-start position-relative z-2">
-            <h1 class="hero-title text-uppercase">Boosting Business<br>Growth Speedily</h1>
+            <h1 class="hero-title text-uppercase">
+                <span class="line1">Boosting</span><br>
+                <span class="line2-wrapper">
+                    <span class="line2">Business</span>
+                    <span class="line3">Growth Speedily</span>
+                </span>
+            </h1>
+
+
+
             <p class="hero-text mb-3">
-                AI-Powered Digital Marketing Agency – Guaranteed Growth in
+                AI-Powered Digital Marketing Agency – Guaranteed Growth<br> in
                 <strong>60–90 Days</strong> or You Don’t Pay
             </p>
 
@@ -673,10 +692,8 @@
 
 
 
-
-
     <!-- ====== CTA Gradient Section (Full Width Like Banner) ====== -->
-    <section id="cta-section" class="px-0 mb-5">
+    <section id="cta-section" class="px-0 mb-2">
         <div
             class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
             <h4 class="mb-3 mb-md-0 text-white fw-normal">
@@ -688,7 +705,7 @@
                 <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
             </a>
         </div>
-    </section>
+    </section><br>
 
 
     <!-- Section: How can we help your business -->
