@@ -185,6 +185,7 @@
     </style>
 
     <!-- Gmail Compose Redirect Script -->
+    <!-- WhatsApp Redirect Script -->
     <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {
             e.preventDefault();
@@ -195,18 +196,19 @@
             const email = document.getElementById("email").value;
             const message = document.getElementById("message").value;
 
-            const subject = encodeURIComponent("New Inquiry from " + firstName + " " + lastName);
-            const body = encodeURIComponent(
-                `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+            // Format WhatsApp message
+            const text = encodeURIComponent(
+                `New Inquiry:\n\nName: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
             );
 
-            // Gmail web compose URL
-            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=sparkfitagency@gmail.com&su=${subject}&body=${body}`;
+            // WhatsApp Business link
+            const whatsappURL = `https://wa.me/971521465567?text=${text}`;
 
-            // Redirect to Gmail compose
-            window.open(gmailURL, "_blank");
+            // Redirect to WhatsApp chat
+            window.open(whatsappURL, "_blank");
         });
     </script>
+
 
 
 
