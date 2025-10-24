@@ -328,15 +328,15 @@
             <div class="row align-items-center">
                 <!-- Left Text -->
                 <div class="col-lg-6 mb-4 mb-lg-0 text-start">
-                    <h2 class="fw-bold mb-3" style="font-family: 'Orbitron', sans-serif;">
+                    <h2 class="fw-bold mb-3 seo-heading">
                         Why Do You Need SEO?
                     </h2>
-                    <p>
+                    <p class="seo-text">
                         Search Engine Optimization (SEO) has become essential for enhancing business growth through
                         digital marketing. Without strong visibility in search engine results, achieving high rankings
                         for relevant keywords and phrases becomes challenging.
                     </p>
-                    <p>
+                    <p class="seo-text">
                         Strategic keyword integration enables search engines to accurately interpret your business
                         offerings, facilitating connection with potential customers actively seeking your products or
                         services, thereby driving targeted organic traffic and increasing conversion opportunities.
@@ -345,11 +345,12 @@
 
                 <!-- Right Neon Gradient Box -->
                 <div class="col-lg-6">
-                    <div class="p-5 rounded-4 text-center neon-box d-flex align-items-center justify-content-center">
+                    <div
+                        class="p-4 p-lg-5 rounded-4 text-center neon-box d-flex align-items-center justify-content-center">
                         <div class="w-100" style="max-width: 400px;">
                             <div class="input-group">
-                                <input type="text" class="form-control rounded-pill py-2 px-4"
-                                    placeholder="www.sparkfitagency.com" style="border: none; font-size: 1rem;">
+                                <input type="text" class="form-control rounded-pill py-2 px-3 seo-input"
+                                    placeholder="www.sparkfitagency.com" style="border: none;">
                                 <span class="input-group-text bg-transparent border-0">
                                     <i class="bi bi-stars" style="font-size: 1.2rem; color: #fff;"></i>
                                 </span>
@@ -367,7 +368,6 @@
             background: linear-gradient(135deg, #ff00ff, #00ffff, #ff0066, #00ffdd);
             background-size: 400% 400%;
             animation: neonGradient 8s ease infinite;
-
             min-height: 250px;
         }
 
@@ -384,7 +384,79 @@
                 background-position: 0% 50%;
             }
         }
+
+        /* Responsive Typography */
+        .seo-heading {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+        }
+
+        .seo-text {
+            font-size: 1rem;
+        }
+
+        .seo-input {
+            font-size: 1rem;
+        }
+
+        /* Media Queries for smaller devices */
+        @media (max-width: 992px) {
+
+            /* Tablets */
+            .seo-heading {
+                font-size: 1.75rem;
+            }
+
+            .seo-text {
+                font-size: 0.95rem;
+            }
+
+            .seo-input {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Mobile landscape */
+            .seo-heading {
+                font-size: 1.5rem;
+            }
+
+            .seo-text {
+                font-size: 0.9rem;
+            }
+
+            .seo-input {
+                font-size: 0.9rem;
+            }
+
+            .neon-box {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            /* Mobile portrait */
+            .seo-heading {
+                font-size: 1.25rem;
+            }
+
+            .seo-text {
+                font-size: 0.85rem;
+            }
+
+            .seo-input {
+                font-size: 0.85rem;
+            }
+
+            .neon-box {
+                min-height: 150px;
+            }
+        }
     </style>
+
 
 
     <!-- IMAGE SECTION -->
