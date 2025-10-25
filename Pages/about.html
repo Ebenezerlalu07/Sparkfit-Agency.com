@@ -314,7 +314,7 @@
 
 
     <!-- OUR PHILOSOPHY SECTION -->
-    <section class="py-5 bg-white">
+    <section class="animate left py-5 bg-white">
         <div class="animate left container">
             <div class="row align-items-center g-4">
 
@@ -354,6 +354,145 @@
     </section>
 
 
+    <section class="animate left choose-section">
+        <div class="container">
+            <h2>Why Choose Sparkfit ?</h2>
+
+            <div
+                class="choose-card d-flex flex-column flex-lg-row text-center align-items-stretch justify-content-center">
+
+                <!-- Block 1 -->
+                <div class="choose-block flex-fill px-4 py-3">
+                    <h4>AI-Powered Precision</h4>
+                    <p>We use advanced AI tools to target what matters most cutting guesswork and accelerating growth.
+                    </p>
+                </div>
+
+                <!-- Triple Vertical Lines (side by side) -->
+                <div class="divider-group d-none d-lg-flex">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="choose-block flex-fill px-4 py-3">
+                    <h4>Guaranteed Results</h4>
+                    <p>Measurable business growth in 60–90 days – or you don’t pay.</p>
+                </div>
+
+                <!-- Triple Vertical Lines -->
+                <div class="divider-group d-none d-lg-flex">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="choose-block flex-fill px-4 py-3">
+                    <h4>Customer Acquisition System</h4>
+                    <p>Our signature Funnel system combines a high-converting sales funnel with scroll-stopping
+                        creatives – designed to convert the right leads on time.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
+
+        .choose-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .choose-section h2 {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.3rem;
+        }
+
+        .choose-card {
+            background: linear-gradient(90deg, #A7245C 0%, #5A35B0 100%);
+            border-radius: 20px;
+            padding: 60px 30px;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .choose-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            min-width: 230px;
+            /* Helps keep heading on one line */
+        }
+
+        .choose-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #fff;
+            white-space: nowrap;
+            /* No wrap */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .choose-card p {
+            color: #f3f3f3;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 380px;
+        }
+
+        /* Triple vertical white lines side-by-side */
+        .divider-group {
+            display: flex;
+            gap: 5px;
+            align-items: stretch;
+            margin: 0 20px;
+        }
+
+        .divider-group .line {
+            width: 1px;
+            background: #fff;
+            opacity: 0.8;
+        }
+
+        /* Make the lines full height of the card */
+        .divider-group .line {
+            height: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .choose-card {
+                flex-direction: column;
+            }
+
+            .divider-group {
+                display: none;
+            }
+
+            .choose-block {
+                margin-bottom: 20px;
+                min-width: auto;
+            }
+
+            .choose-card h4 {
+                white-space: normal;
+                overflow: visible;
+                text-overflow: unset;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 
 
 

@@ -47,15 +47,15 @@
                             Digital Marketing
                         </a>
                         <ul class="dropdown-menu rounded-4 shadow-sm">
-                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="/Digital/seo.html">SEO</a></li>
                             <li><a class="dropdown-item" href="#">SMMA</a></li>
                             <li><a class="dropdown-item" href="#">Marketing Automation</a></li>
                             <li><a class="dropdown-item" href="#">Content Marketing</a></li>
                             <li><a class="dropdown-item" href="#">Performance Marketing</a></li>
                         </ul>
                     </li>
-                    <li class="active nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <li class=" nav-item dropdown">
+                        <a class="active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Design & Dev
                         </a>
@@ -122,11 +122,196 @@
 
 
 
+    <!-- OUR SPECIALIZATION SECTION -->
+    <section class="animate left specialization-section container py-2">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text fw-bold">Our Specialization</h2>
+            <div class="d-flex gap-2">
+                <button class="carousel-btn btn btn-light rounded-circle" id="prevBtn">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="carousel-btn btn btn-light rounded-circle" id="nextBtn">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="overflow-hidden position-relative">
+            <div class="d-flex flex-nowrap gap-4 scroll-container" id="cardContainer">
+
+                <!-- Card 1 -->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Custom-Built Solutions.png" class="card-img-top" alt="Custom Solutions"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Custom-Built Solutions:</h5>
+                        <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typeset
+                            industry.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Performance-Optimized.png" class="card-img-top" alt="Performance Optimized"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Performance-Optimized:</h5>
+                        <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typeset
+                            industry.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Responsive by Design.png" class="card-img-top" alt="Responsive Design"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Responsive by Design:</h5>
+                        <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typeset
+                            industry.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/CMS & E-commerce Integration.png" class="card-img-top"
+                        alt="E-commerce Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">CMS & E-commerce Integration:</h5>
+                        <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typeset
+                            industry.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Demo.png" class="card-img-top" alt="Cloud Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Cloud Integration:</h5>
+                        <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typeset
+                            industry.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
+    <script>
+        const cardContainer = document.getElementById('cardContainer');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+            cardContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            cardContainer.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+    </script>
+
+    <style>
+        .scroll-container {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
 
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            background-color: #9b135d;
+            color: white;
+            border: none;
+        }
 
+        .carousel-btn:hover {
+            background-color: #7a0f4a;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 85%;
+            }
+        }
+    </style>
+
+    <!-- OUR WEB DEVELOPMENT WORK FLOW SECTION -->
+    <section class="animate left workflow-section py-4  bg-white">
+        <div class="container">
+            <!-- Heading -->
+            <h2 class=" fw-bold mb-4" style="font-family: 'Orbitron', sans-serif; font-size: 2rem;">
+                Our Web Development Work Flow
+            </h2>
+
+            <!-- Image -->
+            <div class="workflow-image">
+                <img src="/Assets/Work flow.png" alt="Web Development Workflow" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .workflow-section h2 {
+            letter-spacing: 1px;
+        }
+
+        .workflow-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+
+        @media (max-width: 768px) {
+            .workflow-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .workflow-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+
+<br>
+    <section class="animate left d-flex align-items-center justify-content-center text-center py-4 bg-white">
+        <div class="container px-3">
+            <h1 class="fw-bold mb-4 responsive-heading" style="background: linear-gradient(90deg, #7a2ba4, #e41165);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               font-family: 'Orbitron', sans-serif;
+               line-height: 1.3;">
+                Your vision, transformed<br>
+                into a conversion<br>
+                driven website.
+            </h1>
+
+
+            <a href="#" class="btn-modern filled ai-glow">
+                <span>Contact Us</span>
+                <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+
+        </div>
+    </section>
 
 
 
@@ -393,18 +578,6 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
                 display: none !important;
             }
         </style>
-
-
-
-
-
-
-
-
-
-
-
-
 
     </section>
 

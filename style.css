@@ -90,7 +90,7 @@ p {
 }
 
 .text {
-        font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* ==============================
@@ -601,4 +601,41 @@ p {
 body {
     padding-top: 80px;
     /* equal to navbar height */
+}
+
+/* Default (large screens) */
+.responsive-heading {
+    font-size: 3.5rem;
+}
+
+/* Medium devices (tablets, ≤992px) */
+@media (max-width: 992px) {
+    .responsive-heading {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small devices (phones, ≤768px) */
+@media (max-width: 768px) {
+    .responsive-heading {
+        font-size: 1.8rem;
+    }
+
+    .responsive-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (≤576px) */
+@media (max-width: 576px) {
+    .responsive-heading {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .responsive-btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
 }
