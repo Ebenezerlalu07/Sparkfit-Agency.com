@@ -315,11 +315,7 @@ p {
     z-index: 1;
 }
 
-/* Ensure container content stays above background */
-.hero-section .container {
-    position: relative;
-    z-index: 2;
-}
+
 
 /* Title styling */
 .hero-title {
@@ -331,22 +327,12 @@ p {
 
 /* Make sure on smaller desktops (1024px–1366px) it still fits nicely */
 @media (max-width: 1366px) {
-    .hero-section {
-        height: 90vh;
-        margin: 0 1.5rem 1.5rem 1.5rem;
-    }
 
     .hero-title {
         font-size: 4rem;
     }
 }
 
-/* On large monitors (above 1600px) — prevent extra space */
-@media (min-width: 1600px) {
-    .hero-section {
-        height: 90vh;
-    }
-}
 
 
 /* Second & Third lines wrapper */
