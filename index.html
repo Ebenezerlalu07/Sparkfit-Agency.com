@@ -7,6 +7,7 @@
     <title>Sparkfit Agency</title>
 
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/Assets/Logo white  bg.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,13 +43,13 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class=" nav-link dropdown-toggle" href="/Digital/seo.html" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class=" nav-link dropdown-toggle" href="/Digital/seo.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Digital Marketing
                         </a>
                         <ul class="dropdown-menu rounded-4 shadow-sm">
                             <li><a class="dropdown-item" href="/Digital/seo.html">SEO</a></li>
-                            <li><a class="dropdown-item" href="#">SMMA</a></li>
+                            <li><a class="dropdown-item" href="/Digital/smma.html">SMM</a></li>
                             <li><a class="dropdown-item" href="#">Marketing Automation</a></li>
                             <li><a class="dropdown-item" href="#">Content Marketing</a></li>
                             <li><a class="dropdown-item" href="#">Performance Marketing</a></li>
@@ -96,42 +97,107 @@
 
 
     <!-- Hero Section -->
-    <section class="animate left hero-section d-flex align-items-center position-relative overflow-hidden">
-
-        <!-- Image Background -->
-        <img src="/Assets/Hero banner.jpg" alt="Hero Background"
-            class="hero-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-
-        <!-- Content -->
-        <div class="custom-containe container text-start position-relative z-2">
-            <h1 class=" hero-title text-uppercase">
-                <span class="line1">Boosting</span><br>
-                <span class="line2-wrapper">
-                    <span class="line2">Business</span>
-                    <span class="line3">Growth Speedily</span>
-                </span>
-            </h1>
-
-
-
-            <p class="hero-text mb-3">
-                AI-Powered Digital Marketing Agency – Guaranteed Growth<br> in
-                <strong>60–90 Days</strong> or You Don’t Pay
-            </p>
-
-            <div class="d-flex gap-3 flex-wrap mb-4">
-                <a href="#" class="btn-modern filled ai-glow">
-                    <span>Get in Touch</span>
-                    <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
-                </a>
-
-                <a href="#" class="btn-modern outline">
-                    <span>Contact</span>
-                    <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
-                </a>
-            </div>
+    <section class="animate left hero-section d-flex align-items-center position-relative overflow-hidden py-5">
+        <!-- Video Background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 px-3 pb-3"> <video autoplay loop muted playsinline
+                class="hero-bg w-100 h-100 object-fit-cover rounded-4">
+                <source src="/Assets/Banner Video.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video> </div> <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 rounded-4"
+            style="background: rgba(0, 0, 0, 0.55); z-index: 1;"></div> <!-- Content -->
+        <div class="container text-center position-relative z-2 text-white px-3">
+            <h2 class="hero-title text-uppercase mb-3 text-shadow"> Boosting Business Growth Speedily </h2>
+            <p class="mb-4 text-shadow"> AI-Powered Digital Marketing Agency – Guaranteed Growth in <strong>60–90
+                    Days</strong> or You Don’t Pay </p> <!-- Centered Buttons -->
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-4"> <a href="#"
+                    class="btn-modern filled ai-glow"> <span>Get in Touch</span> <span class="circle"><i
+                            class="bi bi-arrow-up-right"></i></span> </a> <a
+                    href="https://wa.me/971521465567?text=Hello%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20services.%20Can%20you%20please%20share%20some%20details%3F"
+                    target="_blank" class="btn-modern outline"> <span>Contact</span> <span class="circle"><i
+                            class="bi bi-arrow-up-right"></i></span> </a> </div>
         </div>
     </section>
+    <style>
+        /* Make video fully cover the section */
+        .hero-bg {
+            object-fit: cover;
+        }
+
+        /* Add subtle text shadow for visibility */
+        .text-shadow {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            .btn-modern {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .hero-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <style>
+        /* Make video fully cover the section */
+        .hero-bg {
+            object-fit: cover;
+        }
+
+        /* Add subtle text shadow for visibility */
+        .text-shadow {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            /* ✅ Make all content left aligned */
+            .hero-section .container {
+                text-align: left !important;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+                line-height: 1.3;
+            }
+
+            .hero-text {
+                font-size: 1rem;
+            }
+
+            /* ✅ Buttons adjust in size and align left */
+            .btn-modern {
+                width: auto;
+                max-width: none;
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .d-flex.justify-content-center {
+                justify-content: flex-start !important;
+            }
+        }
+    </style>
+
+
+
+
 
 
 
@@ -139,11 +205,11 @@
     <section id="cta-section" class="animate normal px-0 mb-2">
         <div
             class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
-            <h4 class="mb-3 mb-md-0 text-white fw-normal">
+            <h4 class="text mb-3 mb-md-0 text-white fw-normal">
                 Convert More Leads, Faster – in Just 60–90 Days With our
                 <strong>Signature Funnel System</strong>
             </h4>
-            <a href="#contact" class="cta-btn">
+            <a href="/Pages/contact.html" class="cta-btn">
                 Get in Touch
                 <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
             </a>
@@ -159,7 +225,7 @@
             </h1>
 
             <img src="/Assets/How can we help your business.png" alt="How can we help your business"
-                class="img-fluid mt-3" style="width: 100%; max-width: 1000px; height: auto;">
+                class="img-fluid mt-3" style="width: 100%; max-width: 10000px; height: auto;">
         </div>
     </section>
 
@@ -168,13 +234,13 @@
 
 
     <!-- DIGITAL MARKETING SECTION -->
-    <section class="animate left py-5 text-center bg-white">
+    <section class="animate left py-3 text-center bg-white">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class="fw-bold" style="font-family: 'Orbitron', sans-serif;">Digital Marketing</h2>
-                <p class="text-muted">
-                    "Result-Driven Digital Marketing System That Guarantees Growth - Or You Don’t Pay.”
-                </p>
+                <h6 class="sub">
+                    Result-Driven Digital Marketing System That Guarantees Growth - Or You Don’t Pay.
+                </h6>
             </div>
 
             <!-- Carousel Wrapper with Top-Right Button -->
@@ -376,15 +442,14 @@
             <div class="row mb-5 align-items-center">
                 <div class="col-lg-6">
                     <h2 class="fw-bold" style="font-family: 'Orbitron', sans-serif;">
-                        We Always Provide The Best Service
+                        Creative Design and Web Development
                     </h2>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <h5 class="fw-semibold">Services</h5>
-                    <p class="text-muted">
-                        While we can customize your cleaning plan to suit your needs, most clients schedule regular
-                        cleaning services:
-                    </p>
+                    <h6 class="sub ">
+                        Design & Development That Converts - Not Just Functions
+                    </h6>
                 </div>
             </div>
 
@@ -397,7 +462,8 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Web Development</h5>
                             <p class="card-text text-muted">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                                Your vision, expertly crafted into a user-friendly website that engages
+                                and drives results.
                             </p>
                         </div>
                     </div>
@@ -410,7 +476,8 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Web Design</h5>
                             <p class="card-text text-muted">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                                Stand out from competitors with seamless, innovative UI/UX that truly
+                                resonates with users.
                             </p>
                         </div>
                     </div>
@@ -424,7 +491,8 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Mobile App Development</h5>
                             <p class="card-text text-muted">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                                Transform your ideas into intuitive, high-performance mobile apps that engage
+                                and delight users.
                             </p>
                         </div>
                     </div>
@@ -518,18 +586,18 @@ Streamline Workflow -->
     <section class="animate left py-2 text-center bg-white">
         <div class="container">
             <h1 class="text fw-bold triangle" style="font-size: 1.8rem; line-height: 1.3; margin-bottom: 1rem;">
-                That is How we Streamline Workflow
+                Our Signature Funnel System
             </h1>
 
             <img src="/Assets/infographic_11.png" alt="How can we help your business" class="img-fluid mt-3"
-                style="width: 100%; max-width: 1000px; height: auto;">
+                style="width: 100%; max-width: 10000px; height: auto;">
         </div>
     </section>
 
 
     <!-- Brands -->
     <div class="animate left text font container-fluid">
-        <div class=" section-title">Our Clients</div>
+        <div class=" section-title">Our Partners</div>
         <div class="fw-bold section-subtitle">Don't Take Our Word For It</div>
 
         <div class="logo-slider">

@@ -41,18 +41,18 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Digital Marketing
                         </a>
                         <ul class="dropdown-menu rounded-4 shadow-sm">
                             <li><a class="dropdown-item" href="/Digital/seo.html">SEO</a></li>
-                            <li><a class="dropdown-item" href="#">SMM</a></li>
-                            <li><a class="dropdown-item" href="#">Marketing Automation</a></li>
-                            <li><a class="dropdown-item" href="#">Content Marketing</a></li>
-                            <li><a class="dropdown-item" href="#">Performance Marketing</a></li>
+                            <li><a class="dropdown-item" href="/Digital/smma.html">SMM</a></li>
+                            <li><a class="dropdown-item" href="/Digital/marketing.html">Marketing Automation</a></li>
+                            <li><a class="dropdown-item" href="/Digital/content.html">Content Marketing</a></li>
+                            <li><a class="dropdown-item" href="/Digital/performance.html">Performance Marketing</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -66,15 +66,24 @@
                             <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link " href="/Pages/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/about.html">About</a></li>
+
+                    <!-- Contact link for mobile only -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/Pages/contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Desktop contact button -->
-            <a href="/Pages/contact.html" class="active contact-btn ms-auto d-lg-inline-block">Contact</a>
-
+            <a href="/Pages/contact.html" class=" contact-btn ms-auto  d-lg-inline-block">
+                Contact
+            </a>
         </div>
     </nav>
+
+
+
     <script>
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
@@ -86,146 +95,227 @@
         });
     </script>
 
-
     <!-- Banner Section -->
-    <section class="bnr banner-section">
+    <section class="banner-section">
         <div class="container-fluid p-0">
             <div class="row m-0">
                 <div class="col-12 p-0">
-                    <img src="/Assets/Contact banner.png" alt="Banner Image" class="img-fluid w-100"
+                    <img src="/Assets/Marketing Automation.png" alt="Banner Image" class="img-fluid w-100"
                         style="height:60vh; object-fit:cover; object-position:center;">
                 </div>
             </div>
         </div>
     </section><br>
 
+    <!-- ====== CTA Gradient Section (Full Width Like Banner) ====== -->
+    <section id="cta-section" class="animate normal px-0 mb-2">
+        <div
+            class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
+            <h4 class="text mb-3 mb-md-0 text-white fw-normal">
+                Automate the Work. Personalize the Experience. Scale What Matters.
+            </h4>
+            <a href="/Pages/contact.html" class="cta-btn">
+                Get in Touch
+                <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+        </div>
+    </section><br>
 
-    <!-- CONTACT SECTION -->
-    <section class="py-3">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold" style="font-family: 'Orbitron', sans-serif;">
-                    Let's boost your business, together
-                </h2>
-                <p class="text-muted mb-0">Feel free to contact us - we're happy to help!</p>
-            </div>
 
-            <div class="row align-items-stretch g-4">
+    <!-- EXPERTISE SECTION (Side Slide Animation) -->
+    <section class="animate left py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fw-bolder mb-3"
+                style="font-family: 'Orbitron', sans-serif; font-size: 2.4rem; letter-spacing: 0.5px;">
+                Our Specialization: Automating Marketing for Growth
+            </h2><br>
 
-                <!-- Contact Form -->
-                <div class="col-lg-6 d-flex">
-                    <form id="contactForm"
-                        class="p-3 flex-fill d-flex flex-column justify-content-between shadow-sm rounded-4">
+            <div class="row g-4 justify-content-center">
+                <style>
+                    .expertise-card {
+                        position: relative;
+                        text-align: left;
+                        border-radius: 20px;
+                        padding: 2rem;
+                        height: 100%;
+                        min-height: 260px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+                        opacity: 0;
+                    }
+
+                    /* Slide from left */
+                    .slide-left {
+                        transform: translateX(-100px);
+                    }
+
+                    /* Slide from right */
+                    .slide-right {
+                        transform: translateX(100px);
+                    }
+
+                    /* Slide from bottom */
+                    .slide-bottom {
+                        transform: translateY(50px);
+                    }
+
+                    .expertise-card.visible {
+                        transform: translateX(0) translateY(0);
+                        opacity: 1;
+                    }
+
+                    .expertise-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .expertise-icon {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background: #fff;
+                        color: #6A37A5;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.4rem;
+                        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+                        position: absolute;
+                        bottom: 1.5rem;
+                        right: 1.5rem;
+                        transition: all 0.3s ease;
+                    }
+
+                    .expertise-icon:hover {
+                        background: #6A37A5;
+                        color: #fff;
+                    }
+
+                    .expertise-card p {
+                        margin-bottom: 3rem;
+                    }
+
+                    .expertise-card h5 {
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                    }
+
+                    @media (max-width: 768px) {
+                        .expertise-card {
+                            min-height: 220px;
+                        }
+
+                        .expertise-icon {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 1.2rem;
+                            bottom: 1rem;
+                            right: 1rem;
+                        }
+
+                        h2 {
+                            font-size: 1.8rem !important;
+                        }
+
+                        .expertise-card h5 {
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                        }
+                    }
+                </style>
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="expertise-card slide-left w-100" style="background:#f4eef9;">
                         <div>
-                            <div class="form-group mb-4">
-                                <input type="text" class="form-control contact-input" id="firstName"
-                                    placeholder="First Name" required>
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <input type="text" class="form-control contact-input" id="lastName"
-                                    placeholder="Last Name">
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <input type="tel" class="form-control contact-input" id="phone"
-                                    placeholder="Contact Phone">
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <input type="email" class="form-control contact-input" id="email" placeholder="E-mail"
-                                    required>
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <textarea rows="2" class="form-control contact-input" id="message"
-                                    placeholder="Let's talk about your message"></textarea>
-                            </div>
+                            <h5 class="fw-bold">Lead Nurturing</h5>
+                            <p class="opacity-90">Automate your lead journey from awareness to conversion, ensuring no
+                                lead is forgotten.</p>
                         </div>
-
-                        <button type="submit" class="btn w-100 text-white fw-semibold py-2 rounded-pill mt-3"
-                            style="background-color:#9b1b53; border:none;">
-                            Submit
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Google Map -->
-                <div class="col-lg-6 d-flex">
-                    <div class="flex-fill rounded-4 overflow-hidden shadow-sm">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.168164281771!2d55.24020057540276!3d25.0524272777745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b3d14cbefbb%3A0x617d7d6178f2b7f4!2sMotor%20City%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1730021500000!5m2!1sen!2sin"
-                            style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
                     </div>
                 </div>
 
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="expertise-card slide-bottom w-100 text-white" style="background:#7b1fa2;">
+                        <div>
+                            <h5 class="fw-bold">Email Campaigns</h5>
+                            <p class="opacity-90"> Create automated email sequences that engage customers and drive
+                                results.</p>
+                        </div>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                    </div>
+                </div>
 
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="expertise-card slide-right w-100" style="background:#f4eef9;">
+                        <div>
+                            <h5 class="fw-bold">Customer Segmentation</h5>
+                            <p class="text-muted">Segment your audience for targeted, personalized marketing at scale.
+                            </p>
+                        </div>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-6 col-md-6 d-flex">
+                    <div class="expertise-card slide-left w-100 text-white" style="background:#9C018A;">
+                        <div>
+                            <h5 class="fw-bold">Multi-Channel Automation</h5>
+                            <p class="opacity-90">Automate marketing across email, social media, SMS, and more.</p>
+                        </div>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card slide-bottom w-100" style="background:#fbe5f7;">
+                        <div>
+                            <h5 class="fw-bold">Sales Funnel Optimization</h5>
+                            <p class="text-muted"> Automatically guide prospects through your sales funnel, improving
+                                conversions.</p>
+                        </div>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-lg-3 col-md-6 d-flex">
+                    <div class="expertise-card slide-right w-100 text-white" style="background:#9C018A;">
+                        <div>
+                            <h5 class="fw-bold">Analytics & Reporting</h5>
+                            <p class="opacity-90">Track campaign performance with automated reports for better
+                                decision-making.</p>
+                        </div>
+                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Custom Input Styling -->
-    <style>
-        .contact-input {
-            border: none;
-            border-radius: 0;
-            background: transparent;
-            padding-left: 0;
-            font-size: 1rem;
-        }
-
-        .contact-input:focus {
-            border-color: #9b1b53;
-            box-shadow: none;
-        }
-
-        textarea.contact-input {
-            resize: none;
-        }
-    </style>
-
-    <!-- Mailto Redirect Script -->
-    <!-- Open Gmail Compose in new tab with formatted message -->
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll animation with side slide
+            const cards = document.querySelectorAll('.expertise-card');
 
-            const firstName = document.getElementById("firstName").value.trim();
-            const lastName = document.getElementById("lastName").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
 
-            const to = 'sparkfitagency@gmail.com';
-            const subject = 'New Inquiry from Contact Form';
-
-            // Plain-text body with clean line breaks
-            const bodyText =
-                `Hello Sparkfit Agency,
-
-You have a new inquiry from the website contact form.
-
---- Contact Details ---
-Name: ${firstName} ${lastName}
-Phone: ${phone || 'N/A'}
-Email: ${email || 'N/A'}
-
---- Message ---
-${message || 'No message provided.'}
-
-Regards,
-${firstName || 'Website Visitor'}`;
-
-            // Build Gmail compose URL and open in new tab
-            const gmailURL = 'https://mail.google.com/mail/?view=cm&fs=1'
-                + `&to=${encodeURIComponent(to)}`
-                + `&su=${encodeURIComponent(subject)}`
-                + `&body=${encodeURIComponent(bodyText)}`;
-
-            window.open(gmailURL, '_blank');
+            cards.forEach(card => observer.observe(card));
         });
     </script>
 
@@ -237,8 +327,82 @@ ${firstName || 'Website Visitor'}`;
 
 
 
-    <!-- Footer -->
+    <!-- IMAGE SECTION -->
+    <h2 class="text-center fw-bolder"
+        style="font-family: 'Orbitron', sans-serif; font-size: 2.4rem; letter-spacing: 0.5px;">
+        Marketing Automation Roadmap, Leads to Conversion !
+    </h2>
+    <section class="py-2 animate left">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="">
+                    <img src="/Assets/Marketing  Roadmap.png" alt="Showcase Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="d-flex align-items-center justify-content-center text-center py-3 bg-white">
+        <div class="container px-3">
+            <h1 class="fw-bold mb-4 responsive-heading" style="background: linear-gradient(90deg, #7a2ba4, #e41165);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               font-family: 'Orbitron', sans-serif;
+               line-height: 1.3;">
+                Marketing That Runs Itself<br>
+                While You Focus <br>
+                on Growth
+            </h1>
+
+
+            <a href="https://wa.me/971521465567?text=Hello%20Sparkfit%20Agency%2C%20I%27m%20interested%20in%20your%20digital%20marketing%20services."
+                target="_blank" class="btn-modern filled ai-glow" style="text-decoration: none;">
+                <span>Contact Us</span>
+                <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Newsletter and Footer -->
     <section class="newsletter-footer w-100 pt-5">
+
+
+
+        <script>
+            document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const email = document.getElementById('newsletter-email').value;
+                if (email) {
+                    const to = 'sparkfitagency@gmail.com';
+                    const subject = encodeURIComponent('Newsletter Subscription');
+                    const body = encodeURIComponent(`Hi Team,
+
+I’m interested in subscribing to your newsletter. My email is: ${email}`);
+                    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+                    window.open(gmailComposeUrl, '_blank'); // opens Gmail web compose in a new tab
+                } else {
+                    alert('Please enter your email.');
+                }
+            });
+        </script>
+
+
+
+
+
         <!-- Desktop Footer -->
         <footer class="footer text-white position-relative d-none d-md-block">
             <div class="container py-5">
@@ -279,7 +443,7 @@ ${firstName || 'Website Visitor'}`;
                                 Dev</a></li>
                         <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">About</a>
                         </li>
-                        <li class="list-inline-item mx-2"><a href="#"
+                        <li class="list-inline-item mx-2"><a href="/Pages/contact.html"
                                 class="text-white text-decoration-none">Contact</a></li>
                     </ul>
 
