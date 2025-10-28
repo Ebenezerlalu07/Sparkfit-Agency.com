@@ -458,6 +458,133 @@
 
 
 
+
+
+    <section class="animate left container py-5 text-center">
+        <div class="position-relative">
+
+            <!-- Connecting Line -->
+            <div class="position-absolute top-0 start-50 translate-middle-x h-100 d-none d-md-block"
+                style="width: 4px; background: linear-gradient(to bottom, #ff236c, #8f16e2); border-radius: 2px;">
+            </div>
+
+            <div class="row gy-5 position-relative">
+
+                <!-- Step 1 -->
+                <div class="col-md-4 mx-auto">
+                    <div class="p-4 bg-white shadow-sm rounded-4 position-relative">
+                        <div class="icon-circle text-white mb-3 mx-auto">
+                            <i class="bi bi-search fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Strategy & Planning</h5>
+                        <p class="text-muted mb-0">We study your business goals and create a tailored SEO roadmap.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-4 mx-auto">
+                    <div class="p-4 bg-white shadow-sm rounded-4 position-relative">
+                        <div class="icon-circle text-white mb-3 mx-auto">
+                            <i class="bi bi-list-check fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Website Audit</h5>
+                        <p class="text-muted mb-0">We analyze your site to fix errors and uncover growth opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-4 mx-auto">
+                    <div class="p-4 bg-white shadow-sm rounded-4 position-relative">
+                        <div class="icon-circle text-white mb-3 mx-auto">
+                            <i class="bi bi-brush fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Keywords & On-Page SEO</h5>
+                        <p class="text-muted mb-0">We target the right keywords and optimize content, tags, and
+                            structure.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-4 mx-auto">
+                    <div class="p-4 bg-white shadow-sm rounded-4 position-relative">
+                        <div class="icon-circle text-white mb-3 mx-auto">
+                            <i class="bi bi-code-slash fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Technical SEO & Links</h5>
+                        <p class="text-muted mb-0">We boost speed, mobile usability, and build quality backlinks.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-md-4 mx-auto">
+                    <div class="p-4 bg-white shadow-sm rounded-4 position-relative">
+                        <div class="icon-circle text-white mb-3 mx-auto">
+                            <i class="bi bi-rocket-takeoff fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Track & Improve</h5>
+                        <p class="text-muted mb-0">We monitor results and refine strategies for continuous growth.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Styles -->
+    <style>
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff236c, #8f16e2);
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 20px rgba(143, 22, 226, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(143, 22, 226, 0.4);
+        }
+
+        /* Line connector between cards (only visible on md and up) */
+        @media (min-width: 768px) {
+            .row.position-relative::before {
+                content: '';
+                position: absolute;
+                top: 35px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to bottom, #ff236c, #8f16e2);
+                border-radius: 2px;
+                z-index: 0;
+            }
+        }
+
+        .p-4.bg-white {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .p-4.bg-white:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+
+
+
+
+
     <section class="d-flex align-items-center justify-content-center text-center py-3 bg-white">
         <div class="container px-3">
             <h1 class="fw-bold mb-4 responsive-heading" style="background: linear-gradient(90deg, #7a2ba4, #e41165);
