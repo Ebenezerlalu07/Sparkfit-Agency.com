@@ -38,6 +38,8 @@ h6 {
     margin-bottom: 1rem;
 }
 
+
+
 /* Remove Bootstrap default caret */
 .navbar .dropdown-toggle::after {
     display: none !important;
@@ -140,6 +142,8 @@ p {
         max-width: 1000px;
     }
 }
+
+
 
 /* ==============================
    4. Navbar
