@@ -603,7 +603,7 @@
 
     <section class="animate left py-2 text-center bg-white">
         <div class="container">
-            <h2 class="text fw-bold">
+            <h2 class="funneltext text fw-bold">
                 Our Signature Funnel System
             </h2>
 
@@ -612,14 +612,14 @@
                 style="width:100%; height:auto;">
 
             <!-- Mobile Images -->
-            <div class=" mobile-imgs mt-3">
-                <img src="/Assets/Funnel 1.png" alt="Mobile Funnel Image 1" class="img-fluid mb-3"
-                    style="width:100%; height:auto;">
-                <img src="/Assets/Funnel 2.png" alt="Mobile Funnel Image 2" class="img-fluid"
-                    style="width:100%; height:auto;">
+            <div class="mobile-imgs mt-3">
+                <img src="/Assets/Funnel 1.png" alt="Mobile Funnel Image 1" class="img-fluid mb-3 mobile-img"
+                    style="height:auto;">
+                <img src="/Assets/Funnel 2.png" alt="Mobile Funnel Image 2" class="img-fluid mobile-img"
+                    style="height:auto;">
             </div>
         </div>
-    </section><Br>
+    </section>
 
     <style>
         /* Default: show desktop image, hide mobile images */
@@ -642,8 +642,21 @@
                 display: block !important;
                 /* show mobile images */
             }
+
+            .mobile-imgs .mobile-img {
+                width: 90%;
+                margin: 0 auto;
+                /* centers horizontally */
+                display: block;
+                /* ensures centering works */
+            }
+
+            .funneltext {
+                font-size: 1.6rem;
+            }
         }
     </style>
+
 
 
 
