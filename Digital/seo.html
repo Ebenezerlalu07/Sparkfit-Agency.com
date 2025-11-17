@@ -446,17 +446,225 @@
     <h2 class="text-center fw-bold text animate left">
         SEO Roadmap, Driving Results and Visibility !
     </h2>
-    <section class="py-2 animate left">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="">
-                    <img src="/Assets/SEO Roadmap 1.png" alt="Showcase Image" class="img-fluid">
+
+
+    <section class="animate left container strategy-wrap">
+
+        <div class="strategy-inner">
+
+            <!-- LEFT -->
+            <div class="grid-col">
+                <article class="card-like purple">
+                    <h3>Strategy Planning</h3>
+                    <p>strategic keyword integration enables search engines to accurately interpret your
+                        business offerings.</p>
+                </article>
+
+                <article class="card-like">
+                    <h3>Strategy Planning</h3>
+                    <p>strategic keyword integration enables search engines to accurately interpret your
+                        business offerings.</p>
+                </article>
+            </div>
+
+            <!-- CENTER -->
+            <div class="robot-col">
+                <div class="robot-wrap">
+                    <img src="/Assets/Robot.jpg" class="robot img-fluid" alt="">
                 </div>
             </div>
+
+            <!-- RIGHT -->
+            <div class="grid-col">
+                <article class="card-like">
+                    <h3>Strategy Planning</h3>
+                    <p>strategic keyword integration enables search engines to accurately interpret your
+                        business offerings.</p>
+                </article>
+
+                <article class="card-like purple">
+                    <h3>Strategy Planning</h3>
+                    <p>strategic keyword integration enables search engines to accurately interpret your
+                        business offerings.</p>
+                </article>
+            </div>
+
         </div>
-    </section>
+    </section><br>
 
 
+
+
+    <style>
+        :root {
+            --purple: #9b007f;
+            --light: #f3eef6;
+            --card-radius: 18px;
+            --card-padding: 24px;
+            --card-min-h: 150px;
+        }
+
+        /* MAIN WRAPPER */
+        .strategy-wrap {
+            padding: 40px 0;
+        }
+
+        /* DESKTOP LAYOUT */
+        .strategy-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 28px;
+        }
+
+        /* LEFT + RIGHT COLUMNS */
+        .grid-col {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            width: 35%;
+        }
+
+        /* CARDS */
+        .card-like {
+            background: var(--light);
+            border-radius: var(--card-radius);
+            padding: var(--card-padding);
+            min-height: var(--card-min-h);
+            box-shadow: 0 6px 18px rgba(18, 18, 18, 0.06);
+        }
+
+        .card-like h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-like.purple {
+            background: var(--purple);
+            color: #fff;
+        }
+
+        .card-like.purple p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* CENTER IMAGE COLUMN */
+        .robot-col {
+            width: 22%;
+            text-align: center;
+        }
+
+        .robot {
+            width: 100%;
+            max-width: 260px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* FLOATING ANIMATION */
+        .robot-wrap {
+            animation: floaty 4s ease-in-out infinite;
+        }
+
+        @keyframes floaty {
+            0% {
+                transform: translateY(-4px);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+
+            100% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* TABLET */
+        @media (max-width: 992px) {
+            .grid-col {
+                width: 38%;
+                gap: 22px;
+            }
+
+            .robot-col {
+                width: 24%;
+            }
+
+            .robot {
+                max-width: 210px;
+            }
+        }
+
+        /* MOBILE FIXED INSIDE CONTAINER */
+        @media (max-width: 768px) {
+
+            .strategy-wrap {
+                padding: 20px 0;
+            }
+
+            .strategy-inner {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                /* stays inside container */
+                margin: 0 auto;
+            }
+
+            .grid-col,
+            .robot-col {
+                width: 100%;
+                max-width: 100%;
+                /* stops overflow */
+            }
+
+            .grid-col {
+                gap: 16px;
+                margin-bottom: 22px;
+            }
+
+            .robot {
+                max-width: 180px;
+                margin: 12px auto 28px auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .strategy-wrap {
+                padding: 20px 0;
+            }
+
+            .strategy-inner {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+                padding-left: 16px;
+                /* ⭐ LEFT GAP */
+                padding-right: 16px;
+                /* ⭐ RIGHT GAP */
+                box-sizing: border-box;
+            }
+
+            .grid-col,
+            .robot-col {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .grid-col {
+                gap: 16px;
+                margin-bottom: 22px;
+            }
+
+            .robot {
+                max-width: 180px;
+                margin: 12px auto 28px auto;
+            }
+        }
+    </style>
 
 
 
@@ -574,7 +782,8 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
                     </ul>
 
                     <p class="mb-2 mx-auto" style="max-width:700px;">
-                        We are a transformative AI-Technology company helping the world solve complex business problems,
+                        We are a transformative AI-Technology company helping the world solve complex business
+                        problems,
                         improving efficiency with cost-effective and innovative solutions for your organization's
                         future.
                     </p>
@@ -606,12 +815,14 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
 
                 <!-- Navigation Links -->
                 <ul class="footer-alt-nav list-inline text-center mb-3">
-                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Home</a>
+                    </li>
                     <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Digital
                             Marketing</a></li>
                     <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Design &
                             Dev</a></li>
-                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">About</a></li>
+                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">About</a>
+                    </li>
                     <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Contact</a>
                     </li>
                 </ul>
@@ -619,7 +830,8 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
                 <!-- Description -->
                 <p class="footer-alt-desc text-center mb-2">
                     We are a transformative AI-Technology company helping the world solve complex business problems,
-                    improving efficiency with cost-effective and innovative solutions for your organization's future.
+                    improving efficiency with cost-effective and innovative solutions for your organization's
+                    future.
                 </p>
 
                 <!-- Copyright -->
