@@ -442,15 +442,13 @@
 
 
 
-    <!-- IMAGE SECTION -->
-    <h2 class="text-center fw-bold text animate left">
-        SEO Roadmap, Driving Results and Visibility !
-    </h2>
 
 
-    <!-- ========================= SECTION START ========================= -->
-
-    <section class="animate left container strategy-wrap">
+    <section class="animate left container strategy-wrap bordered-section">
+        <!-- IMAGE SECTION -->
+        <h2 class="text-center fw-bold text animate left">
+            SEO Roadmap, Driving Results and Visibility !
+        </h2><br><br>
 
         <div class="strategy-inner">
 
@@ -540,9 +538,8 @@
             </article>
         </div>
 
-    </section>
+    </section><br>
 
-    <!-- ========================= CSS ========================= -->
 
     <style>
         :root {
@@ -552,6 +549,26 @@
             --card-padding: 24px;
             --card-min-h: 150px;
         }
+
+        /* SECTION BORDER (Neon Glow) */
+        /* SECTION SHADOW (Neon Glow Shadow — no border line) */
+        .bordered-section {
+            border-radius: 30px;
+            padding: 60px 80px;
+            margin-top: 40px;
+            background: #ffffff;
+            box-shadow:
+                0 0 20px rgba(175, 0, 255, 0.6),
+                0 0 45px rgba(255, 20, 147, 0.5),
+                0 0 70px rgba(175, 0, 255, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .bordered-section {
+                padding: 20px !important;
+            }
+        }
+
 
         /* BASE CARD */
         .card-like {
@@ -706,11 +723,15 @@
 
         .bottom-center-card article {
             width: 45%;
-            position: relative;
         }
 
         /* TABLET */
         @media (max-width: 992px) {
+
+            .bordered-section {
+                padding: 30px;
+                /* responsive padding */
+            }
 
             .grid-col {
                 width: 38%;
@@ -732,6 +753,11 @@
         /* MOBILE */
         @media (max-width: 768px) {
 
+            .bordered-section {
+                padding: 20px;
+                /* compact spacing for mobile */
+            }
+
             .strategy-inner {
                 flex-direction: column;
                 width: 100%;
@@ -744,7 +770,6 @@
                 width: 100%;
             }
 
-            /* Robot between Step 2 & Step 3 */
             .robot-col {
                 order: 3;
             }
@@ -778,9 +803,41 @@
                 min-height: var(--card-min-h);
             }
         }
+
+        /* LEFT COLUMN gap for Step 1 & Step 2 (pushes cards toward center) */
+        .left-col .card-like {
+            margin-left: 25px;
+            /* keep as-is */
+        }
+
+        /* RIGHT COLUMN gap for Step 5 & Step 4 (pushes cards toward center) */
+        .right-col .card-like {
+            margin-right: 25px;
+            /* <-- use margin-right to move inward */
+        }
+
+        /* MOBILE FIX: Remove gaps so stacking remains clean */
+        @media (max-width: 768px) {
+
+            .left-col .card-like,
+            .right-col .card-like {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bordered-section.container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                width: 90% !important;
+                max-width: 100% !important;
+
+            }
+        }
     </style>
 
-    <!-- ========================= JS (Mobile Reorder + Animation + Icons) ========================= -->
+
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -853,7 +910,7 @@
         })();
     </script>
 
-    <!-- ========================= SECTION END ========================= -->
+
 
 
 
