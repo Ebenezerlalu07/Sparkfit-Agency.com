@@ -906,7 +906,7 @@ body {
 
     /* ⬇️ Smaller robot on mobile */
     .robot {
-        max-width: 135px !important;
+        max-width: 150px !important;
         margin: 12px auto 24px auto;
     }
 
