@@ -690,11 +690,10 @@ body {
     --card-min-h: 110px;
 }
 
-/* SECTION (Desktop height reduced) */
+/* SECTION (Desktop height reduced globally now overwritten later) */
 .bordered-section {
     border-radius: 30px;
     padding: 20px 30px;
-    /* Reduced height for desktop */
     margin-top: 30px;
     background: #ffffff;
     box-shadow:
@@ -705,13 +704,6 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Larger Desktop Padding */
-@media (min-width: 1400px) {
-    .bordered-section {
-        padding: 22px 32px;
-    }
 }
 
 .strategy-wrap,
@@ -829,7 +821,7 @@ body {
     width: 35%;
 }
 
-/* ROBOT */
+/* ROBOT COLUMN */
 .robot-col {
     width: 22%;
     text-align: center;
@@ -899,11 +891,8 @@ body {
 
     .bordered-section {
         width: 90% !important;
-        /* Section reduced by 10% */
         margin-left: 5% !important;
-        /* 5% gap left */
         margin-right: 5% !important;
-        /* 5% gap right */
         padding: 20px;
     }
 
@@ -921,7 +910,6 @@ body {
     .robot-col {
         width: 100%;
         order: 99;
-        /* robot at bottom */
         margin-top: 20px;
         text-align: center;
     }
@@ -970,18 +958,27 @@ body {
     }
 }
 
+/* ====== GLOBAL LAPTOP & DESKTOP HEIGHT REDUCTION ====== */
+@media (min-width: 1024px) and (max-width: 1920px) {
 
-
-/* ====== 12-inch Laptop Height Reduction ====== */
-@media (min-width: 1280px) and (max-width: 1440px) {
     .bordered-section {
-        padding: 18px 28px !important;
+        padding: 14px 24px !important;
+        /* 🔥 Reduced full section height */
     }
-}
 
-/* ====== 15-inch Laptop Height Reduction ====== */
-@media (min-width: 1536px) and (max-width: 1920px) {
-    .bordered-section {
-        padding: 20px 30px !important;
+    .strategy-wrap {
+        padding: 18px 0 !important;
+        /* 🔥 Less top/bottom space */
+    }
+
+    .card-like {
+        min-height: 95px !important;
+        /* 🔥 Smaller cards */
+        padding: 16px !important;
+    }
+
+    .robot {
+        max-width: 200px !important;
+        /* 🔥 Slightly smaller */
     }
 }
