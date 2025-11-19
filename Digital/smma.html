@@ -474,20 +474,158 @@
 
 
 
-    <!-- IMAGE SECTION -->
-    <h2 class="text-center animate left fw-bold text">
-        SMM Roadmap, Turning Clicks Into Customers
-    </h2>
-    <section class="py-2 animate left">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="">
-                    <img src="/Assets/SMMA Roadmap.png" alt="Showcase Image" class="img-fluid">
+
+
+    <section class="animate left container strategy-wrap bordered-section">
+
+        <!-- TITLE -->
+        <h2 class="text-center fw-bold text animate left">
+            SMM Roadmap, Turning Clicks Into Customers !
+        </h2><br><br>
+
+        <div class="strategy-inner">
+
+            <!-- LEFT COLUMN (Step 1 & Step 2) -->
+            <div class="grid-col left-col">
+
+                <!-- Step 1 -->
+                <article class="card-like purple" data-step="1">
+                    <span class="step-tag">Step 1</span>
+                    <div class="icon-wrap"><i data-lucide="goal"></i></div>
+                    <h3>Understand & Plan</h3>
+                    <p>We study your business goals, audience, and competitors to craft a winning social media strategy.
+                    </p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="card-like" data-step="2">
+                    <span class="step-tag">Step 2</span>
+                    <div class="icon-wrap"><i data-lucide="brush"></i></div>
+                    <h3>Creative Content</h3>
+                    <p>Our team designs engaging posts, videos, and campaigns that reflect your brand and attract
+                        attention.</p>
+                </article>
+
+            </div>
+
+            <!-- CENTER IMAGE (Robot) -->
+            <div class="robot-col">
+                <div class="robot-wrap">
+                    <img src="/Assets/SMMA Robot.png" class="robot img-fluid" alt="">
                 </div>
             </div>
-        </div>
-    </section><br>
 
+            <!-- RIGHT COLUMN (Step 3 & Step 4) -->
+            <div class="grid-col right-col">
+
+                <!-- Step 3 -->
+                <article class="card-like purple" data-step="3">
+                    <span class="step-tag">Step 3</span>
+                    <div class="icon-wrap"><i data-lucide="calendar-days"></i></div>
+                    <h3>Smart Scheduling</h3>
+                    <p>We publish content at the best times to maximize reach, consistency, and engagement.</p>
+                </article>
+
+                <!-- Step 4 -->
+                <article class="card-like" data-step="4">
+                    <span class="step-tag">Step 4</span>
+                    <div class="icon-wrap"><i data-lucide="messages-square"></i></div>
+                    <h3>Engage & Grow</h3>
+                    <p>We interact with followers, respond to messages, and build a loyal online community around your
+                        brand.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+        <!-- ⭐ STEP 5 (Bottom Center) -->
+        <div class="bottom-center-card">
+            <article class="card-like purple" data-step="5">
+                <span class="step-tag">Step 5</span>
+                <div class="icon-wrap"><i data-lucide="bar-chart-3"></i></div>
+                <h3>Monitor & Report</h3>
+                <p>We track performance, optimize campaigns, and share transparent reports to keep you informed and
+                    ahead.</p>
+            </article>
+        </div>
+
+    </section>
+
+    <br><br><br>
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        (function () {
+            const state = { moved: false, originals: new Map() };
+
+            function saveOriginal(el) {
+                if (!state.originals.has(el)) {
+                    state.originals.set(el, { parent: el.parentNode, nextSibling: el.nextSibling });
+                }
+            }
+
+            function reorderForMobile() {
+                const mobile = window.innerWidth <= 768;
+                const strategyInner = document.querySelector('.strategy-inner');
+                const robotCol = document.querySelector('.robot-col');
+                const allCards = Array.from(document.querySelectorAll('.card-like'));
+
+                if (mobile && !state.moved) {
+                    allCards.forEach(saveOriginal);
+                    saveOriginal(robotCol);
+
+                    let mobileStack = document.createElement('div');
+                    mobileStack.className = "mobile-stack";
+                    mobileStack.style.display = "flex";
+                    mobileStack.style.flexDirection = "column";
+                    mobileStack.style.gap = "16px";
+
+                    const sorted = allCards.sort((a, b) =>
+                        parseInt(a.dataset.step) - parseInt(b.dataset.step)
+                    );
+
+                    sorted.forEach(card => mobileStack.appendChild(card));
+
+                    const leftCol = document.querySelector('.left-col');
+                    strategyInner.insertBefore(robotCol, leftCol.nextSibling);
+                    strategyInner.insertBefore(mobileStack, robotCol.nextSibling);
+
+                    state.moved = true;
+                }
+
+                if (!mobile && state.moved) {
+                    for (let [el, pos] of state.originals.entries()) {
+                        pos.parent.insertBefore(el, pos.nextSibling);
+                    }
+
+                    document.querySelector('.mobile-stack')?.remove();
+                    state.moved = false;
+                }
+            }
+
+            window.addEventListener('DOMContentLoaded', reorderForMobile);
+            window.addEventListener('resize', () => setTimeout(reorderForMobile, 150));
+
+            const cards = document.querySelectorAll('.card-like');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            cards.forEach(card => observer.observe(card));
+        })();
+    </script>
 
 
 
