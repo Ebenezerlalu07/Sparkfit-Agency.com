@@ -672,12 +672,7 @@ body {
 
 
 
-
-
-
-
-
- :root {
+:root {
     --purple: linear-gradient(45deg, rgb(255, 20, 147), rgb(175, 0, 255));
     --light: #f3eef6;
     --card-radius: 18px;
@@ -685,8 +680,7 @@ body {
     --card-min-h: 150px;
 }
 
-/* SECTION BORDER (Neon Glow) */
-/* SECTION SHADOW (Neon Glow Shadow — no border line) */
+/* SECTION SHADOW */
 .bordered-section {
     border-radius: 30px;
     padding: 60px 80px;
@@ -694,9 +688,15 @@ body {
     background: #ffffff;
     box-shadow:
         0 0 20px rgba(110, 52, 162, 0.60),
-        /* #6e34a2 */
         0 0 45px rgba(110, 52, 162, 0.50),
         0 0 70px rgba(110, 52, 162, 0.35);
+}
+
+@media (max-width: 768px) {
+    .strategy-wrap h2 {
+        padding: 0 20px;
+        /* add left + right gap */
+    }
 }
 
 
@@ -704,9 +704,7 @@ body {
     .bordered-section {
         padding: 20px !important;
     }
-
 }
-
 
 /* BASE CARD */
 .card-like {
@@ -733,7 +731,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* PURPLE GRADIENT CARDS */
+/* PURPLE CARDS */
 .card-like.purple {
     background: var(--purple);
     color: #fff;
@@ -761,7 +759,7 @@ body {
     color: rgb(175, 0, 255);
 }
 
-/* STAGGER ANIMATION DELAYS */
+/* STEP ANIMATION DELAYS */
 .card-like[data-step="1"] {
     transition-delay: 0.08s;
 }
@@ -813,7 +811,7 @@ body {
     gap: 28px;
 }
 
-/* LEFT & RIGHT COLUMNS */
+/* COLUMN WIDTHS */
 .grid-col {
     display: flex;
     flex-direction: column;
@@ -852,7 +850,7 @@ body {
     }
 }
 
-/* BOTTOM CENTER CARD */
+/* BOTTOM CARD */
 .bottom-center-card {
     margin-top: 40px;
     display: flex;
@@ -868,7 +866,6 @@ body {
 
     .bordered-section {
         padding: 30px;
-        /* responsive padding */
     }
 
     .grid-col {
@@ -880,7 +877,7 @@ body {
     }
 
     .robot {
-        max-width: 210px;
+        max-width: 200px;
     }
 
     .bottom-center-card article {
@@ -893,7 +890,6 @@ body {
 
     .bordered-section {
         padding: 20px;
-        /* compact spacing for mobile */
     }
 
     .strategy-inner {
@@ -908,13 +904,14 @@ body {
         width: 100%;
     }
 
-    .robot-col {
-        order: 3;
+    /* ⬇️ Smaller robot on mobile */
+    .robot {
+        max-width: 135px !important;
+        margin: 12px auto 24px auto;
     }
 
-    .robot {
-        max-width: 180px;
-        margin: 12px auto 28px auto;
+    .robot-col {
+        order: 3;
     }
 
     .bottom-center-card article {
@@ -942,19 +939,16 @@ body {
     }
 }
 
-/* LEFT COLUMN gap for Step 1 & Step 2 (pushes cards toward center) */
+/* CENTER ALIGNMENT GAPS */
 .left-col .card-like {
     margin-left: 25px;
-    /* keep as-is */
 }
 
-/* RIGHT COLUMN gap for Step 5 & Step 4 (pushes cards toward center) */
 .right-col .card-like {
     margin-right: 25px;
-    /* <-- use margin-right to move inward */
 }
 
-/* MOBILE FIX: Remove gaps so stacking remains clean */
+/* MOBILE FIX — remove inwards gaps */
 @media (max-width: 768px) {
 
     .left-col .card-like,
@@ -964,12 +958,12 @@ body {
     }
 }
 
+/* REDUCE SECTION SIDE SPACING ON MOBILE */
 @media (max-width: 768px) {
     .bordered-section.container {
         padding-left: 0 !important;
         padding-right: 0 !important;
         width: 90% !important;
         max-width: 100% !important;
-
     }
 }
