@@ -969,3 +969,19 @@ body {
         margin-right: 0 !important;
     }
 }
+
+
+
+/* ====== 12-inch Laptop Height Reduction ====== */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .bordered-section {
+        padding: 18px 28px !important;
+    }
+}
+
+/* ====== 15-inch Laptop Height Reduction ====== */
+@media (min-width: 1536px) and (max-width: 1920px) {
+    .bordered-section {
+        padding: 20px 30px !important;
+    }
+}
