@@ -958,27 +958,50 @@ body {
     }
 }
 
-/* ====== GLOBAL LAPTOP & DESKTOP HEIGHT REDUCTION ====== */
+/* ====== GLOBAL LAPTOP & DESKTOP — STRONG HEIGHT REDUCTION ====== */
 @media (min-width: 1024px) and (max-width: 1920px) {
 
     .bordered-section {
-        padding: 14px 24px !important;
-        /* 🔥 Reduced full section height */
+        padding: 10px 18px !important;
+        /* ⬅ even smaller height */
+        margin-top: 20px !important;
     }
 
     .strategy-wrap {
-        padding: 18px 0 !important;
-        /* 🔥 Less top/bottom space */
+        padding: 10px 0 !important;
+        /* ⬅ very compact */
+    }
+
+    .strategy-inner {
+        gap: 14px !important;
+        /* ⬅ reduced card spacing */
     }
 
     .card-like {
-        min-height: 95px !important;
-        /* 🔥 Smaller cards */
-        padding: 16px !important;
+        min-height: 80px !important;
+        /* ⬅ smaller cards */
+        padding: 10px !important;
+    }
+
+    .card-like h3 {
+        font-size: 1.1rem !important;
+        /* ⬅ smaller text */
+        margin-bottom: 4px !important;
+    }
+
+    .card-like p {
+        font-size: 0.8rem !important;
     }
 
     .robot {
-        max-width: 200px !important;
-        /* 🔥 Slightly smaller */
+        max-width: 150px !important;
+        /* ⬅ smaller robot */
+    }
+
+    .step-tag {
+        padding: 3px 8px !important;
+        font-size: 0.7rem !important;
+        top: -6px !important;
+        left: -6px !important;
     }
 }
