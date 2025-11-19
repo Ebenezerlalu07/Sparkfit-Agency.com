@@ -250,50 +250,173 @@
         }
     </style>
 
-    <!-- OUR WEB DEVELOPMENT WORK FLOW SECTION -->
-    <section class="animate left workflow-section py-4  bg-white">
-        <div class="container">
-            <!-- Heading -->
-            <h2 class="text fw-bold mb-4">
-                Web Development Work Flow
-            </h2>
 
-            <!-- Image -->
-            <div class="workflow-image">
-                <img src="/Assets/Work flow.png" alt="Web Development Workflow" class="img-fluid">
+
+
+    <section class="animate left container strategy-wrap bordered-section">
+
+        <!-- TITLE -->
+        <h2 class="text-center fw-bold text animate left">
+            Content Marketing Roadmap, Plan, Create, Convert !
+        </h2><br><br>
+
+        <div class="strategy-inner">
+
+            <!-- LEFT COLUMN (Step 1, 2, 3) -->
+            <div class="grid-col left-col">
+
+                <!-- Step 1 -->
+                <article class="card-like purple" data-step="1">
+                    <span class="step-tag">Step 1</span>
+                    <div class="icon-wrap"><i data-lucide="goal"></i></div>
+                    <h3>Requirement Analysis</h3>
+                    <p>Understand goals and needs for clear project direction.</p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="card-like" data-step="2">
+                    <span class="step-tag">Step 2</span>
+                    <div class="icon-wrap"><i data-lucide="search-check"></i></div>
+                    <h3>Planning</h3>
+                    <p>Define milestones, timelines, and allocate resources efficiently.</p>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="card-like purple" data-step="3">
+                    <span class="step-tag">Step 3</span>
+                    <div class="icon-wrap"><i data-lucide="clipboard-edit"></i></div>
+                    <h3>Designing (UI/UX)</h3>
+                    <p>Create intuitive, attractive interfaces focused on user experience.</p>
+                </article>
+
             </div>
+
+            <!-- CENTER IMAGE -->
+            <div class="robot-col">
+                <div class="robot-wrap">
+                    <img src="/Assets/Performance robot.png" class="robot img-fluid" alt="">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN (Step 4, 5, 6) -->
+            <div class="grid-col right-col">
+
+                <!-- Step 4 -->
+                <article class="card-like purple" data-step="4">
+                    <span class="step-tag">Step 4</span>
+                    <div class="icon-wrap"><i data-lucide="image"></i></div>
+                    <h3>Development</h3>
+                    <p>Build scalable front-end and back-end solutions with clean code.</p>
+                </article>
+
+                <!-- Step 5 -->
+                <article class="card-like" data-step="5">
+                    <span class="step-tag">Step 5</span>
+                    <div class="icon-wrap"><i data-lucide="share-2"></i></div>
+                    <h3>Deployment</h3>
+                    <p>Launch product smoothly with secure setup and configurations.</p>
+                </article>
+
+                <!-- Step 6 -->
+                <article class="card-like purple" data-step="6">
+                    <span class="step-tag">Step 6</span>
+                    <div class="icon-wrap"><i data-lucide="trending-up"></i></div>
+                    <h3>Testing: </h3>
+                    <p>Conduct comprehensive tests to ensure functionality and performance.</p>
+                </article>
+
+            </div>
+
         </div>
-    </section>
+
+        <!-- ⭐ STEP 7 (Center Bottom) -->
+        <div class="bottom-center-card">
+            <article class="card-like purple" data-step="7">
+                <span class="step-tag">Step 7</span>
+                <div class="icon-wrap"><i data-lucide="check-circle"></i></div>
+                <h3>Maintenance & Update</h3>
+                <p>Provide ongoing support, bug fixes, and feature enhancements.</p>
+            </article>
+        </div>
+
+    </section> <br><br><br>
 
 
-    <style>
-        .workflow-section h2 {
-            letter-spacing: 1px;
-        }
 
-        .workflow-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 
+    <script>
+        (function () {
+            const state = { moved: false, originals: new Map() };
 
-        @media (max-width: 768px) {
-            .workflow-section h2 {
-                font-size: 1.8rem;
+            function saveOriginal(el) {
+                if (!state.originals.has(el)) {
+                    state.originals.set(el, { parent: el.parentNode, nextSibling: el.nextSibling });
+                }
             }
-        }
 
-        @media (max-width: 576px) {
-            .workflow-section h2 {
-                font-size: 1.5rem;
+            function reorderForMobile() {
+                const mobile = window.innerWidth <= 768;
+                const strategyInner = document.querySelector('.strategy-inner');
+                const robotCol = document.querySelector('.robot-col');
+                const allCards = Array.from(document.querySelectorAll('.card-like'));
+
+                if (mobile && !state.moved) {
+                    allCards.forEach(saveOriginal);
+                    saveOriginal(robotCol);
+
+                    let mobileStack = document.createElement('div');
+                    mobileStack.className = "mobile-stack";
+                    mobileStack.style.display = "flex";
+                    mobileStack.style.flexDirection = "column";
+                    mobileStack.style.gap = "16px";
+
+                    const sorted = allCards.sort((a, b) =>
+                        parseInt(a.dataset.step) - parseInt(b.dataset.step)
+                    );
+
+                    sorted.forEach(card => mobileStack.appendChild(card));
+
+                    const leftCol = document.querySelector('.left-col');
+                    strategyInner.insertBefore(robotCol, leftCol.nextSibling);
+                    strategyInner.insertBefore(mobileStack, robotCol.nextSibling);
+
+                    state.moved = true;
+                }
+
+                if (!mobile && state.moved) {
+                    for (let [el, pos] of state.originals.entries()) {
+                        pos.parent.insertBefore(el, pos.nextSibling);
+                    }
+
+                    document.querySelector('.mobile-stack')?.remove();
+                    state.moved = false;
+                }
             }
-        }
-    </style>
+
+            window.addEventListener('DOMContentLoaded', reorderForMobile);
+            window.addEventListener('resize', () => setTimeout(reorderForMobile, 150));
+
+            const cards = document.querySelectorAll('.card-like');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            cards.forEach(card => observer.observe(card));
+        })();
+    </script>
 
 
-    <br>
+
+
     <section class="animate left d-flex align-items-center justify-content-center text-center py-4 bg-white">
         <div class="container px-3">
             <h1 class="fw-bold mb-4 responsive-heading" style="background: linear-gradient(90deg, #7a2ba4, #e41165);
