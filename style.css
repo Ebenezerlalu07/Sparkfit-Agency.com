@@ -878,7 +878,7 @@ body {
     }
 
     .robot {
-        max-width: 180px;
+        max-width: 200px;
     }
 
     .bottom-center-card article {
@@ -994,7 +994,7 @@ body {
     }
 
     .robot {
-        max-width: 150px !important;
+        max-width: 200px !important;
         /* ⬅ smaller robot */
     }
 
