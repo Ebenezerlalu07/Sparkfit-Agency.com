@@ -238,239 +238,278 @@
 
 
 
-    <section class="our-services-section py-5">
-        <div class="container-fluid text-center">
-            <h2 class="text white fw-bold ">
-                How can we help your business?
-            </h2><br>
 
-            <div class="row sf justify-content-center g-4">
+
+
+    <section class="pill-section py-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text">How can we help your business?</h2><br>
+        </div>
+        <div class="container">
+            <div class="row flex-row cards-row">
 
                 <!-- CARD 1 -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <i class="bi bi-phone"></i>
+                <div class="pill-wrapper">
+                    <div class="pill-card" style="background-image:url('/Assets/1.jpg');">
+                        <div class="overlay"></div>
+                        <div class="pill-content">
+                            <h3 class="pill-title">Generate Leads</h3>
+                            <p class="pill-desc">Convert customers faster with proven strategies.</p>
                         </div>
-                        <h5 class="service-title">Generate Leads<br>Convert Customers Fast</h5>
-                        <p class="service-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt</p>
-                        <a href="#" class="service-more">MORE</a>
                     </div>
                 </div>
 
                 <!-- CARD 2 -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <i class="bi bi-gear-fill"></i>
+                <div class="pill-wrapper">
+                    <div class="pill-card" style="background-image:url('/Assets/2.jpg');">
+                        <div class="overlay"></div>
+                        <div class="pill-content">
+                            <h3 class="pill-title">Modern Web Design</h3>
+                            <p class="pill-desc">Create websites that drive sales effectively.</p>
                         </div>
-                        <h5 class="service-title">Design Websites<br> That Drive Conversions</h5>
-                        <p class="service-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt</p>
-                        <a href="#" class="service-more">MORE</a>
                     </div>
                 </div>
 
                 <!-- CARD 3 -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <i class="bi bi-person-fill"></i>
+                <div class="pill-wrapper">
+                    <div class="pill-card" style="background-image:url('/Assets/3.jpg');">
+                        <div class="overlay"></div>
+                        <div class="pill-content">
+                            <h3 class="pill-title">AI Automation</h3>
+                            <p class="pill-desc">Automate marketing using powerful AI tools.</p>
                         </div>
-                        <h5 class="service-title">Automate Marketing<br> With AI Precision</h5>
-                        <p class="service-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt</p>
-                        <a href="#" class="service-more">MORE</a>
                     </div>
                 </div>
 
                 <!-- CARD 4 -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <i class="bi bi-cloud-fill"></i>
+                <div class="pill-wrapper">
+                    <div class="pill-card" style="background-image:url('/Assets/4.jpg');">
+                        <div class="overlay"></div>
+                        <div class="pill-content">
+                            <h3 class="pill-title">Target Audience</h3>
+                            <p class="pill-desc">Reach customers with precision targeting.</p>
                         </div>
-                        <h5 class="service-title">Target Audiences<br> Using Smart Technology</h5>
-                        <p class="service-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt</p>
-                        <a href="#" class="service-more">MORE</a>
                     </div>
                 </div>
 
                 <!-- CARD 5 -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <i class="bi bi-lightning-charge-fill"></i>
+                <div class="pill-wrapper">
+                    <div class="pill-card" style="background-image:url('/Assets/5.jpg');">
+                        <div class="overlay"></div>
+                        <div class="pill-content">
+                            <h3 class="pill-title">Digital Growth</h3>
+                            <p class="pill-desc">Boost growth through digital innovation.</p>
                         </div>
-                        <h5 class="service-title">Guarantee Growth<br> Through Digital Innovation</h5>
-                        <p class="service-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt</p>
-                        <a href="#" class="service-more">MORE</a>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section><br>
+    </section>
+
+
+
+
 
 
     <style>
-        /* ----------------------------------------
-   SECTION BACKGROUND (Neon Gradient)
------------------------------------------ */
-        .our-services-section {
-            background: linear-gradient(135deg, #6838A6, #F00D55);
-            padding-top: 30px;
-            padding-bottom: 30px;
+        /* Row behaves like flex for width expand */
+        .flex-row {
+            display: flex !important;
+            gap: 10px;
         }
 
-        .white {
-            color: white;
+        /* Default wrapper size */
+        .pill-wrapper {
+            flex: 1;
+            transition: flex 0.5s ease;
         }
 
+        /* Hover expand */
+        .pill-wrapper.active {
+            flex: 5;
+        }
 
-        /* ----------------------------------------
-   HEADING
------------------------------------------ */
-        .services-heading {
-            font-size: 60px;
-            font-weight: 800;
+        /* Others shrink */
+        .pill-wrapper.shrink {
+            flex: 0.5;
+        }
+
+        /* Pill card style */
+        .pill-card {
+            height: 600px;
+            border-radius: 200px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        /* Curve reduces on hover */
+        .pill-wrapper.active .pill-card {
+            border-radius: 50px;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            transition: 0.3s ease;
+        }
+
+        .pill-wrapper.active .overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Content box */
+        .pill-content {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.4s ease;
             color: #fff;
-            letter-spacing: 2px;
         }
 
-        /* ----------------------------------------
-   SERVICE CARD
-   (Width increased to fill container)
------------------------------------------ */
-        .service-box {
-            background: #fff;
-            padding: 40px 25px;
-            border-radius: 20px;
-            min-height: 350px;
-            box-shadow: none !important;
-            transition: 0.3s ease-in-out;
-
-            width: 100%;
-            /* ⭐ fill full column width */
-            height: 100%;
-
-            margin-left: 0;
-            /* remove center restriction */
-            margin-right: 0;
+        /* Show title + desc on hover */
+        .pill-wrapper.active .pill-content {
+            opacity: 1;
+            transform: translateY(0px);
         }
 
-        .service-box:hover {
-            transform: translateY(-5px);
-        }
-
-        /* ----------------------------------------
-   ICON BASE STYLE
------------------------------------------ */
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            margin: auto;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px;
-            color: white;
-        }
-
-        /* ----------------------------------------
-   NEON ICON COLORS
------------------------------------------ */
-        .service-box:nth-child(1) .service-icon {
-            background: #ef5482;
-        }
-
-        .service-box:nth-child(2) .service-icon {
-            background: #9e5dcb;
-        }
-
-        .service-box:nth-child(3) .service-icon {
-            background: #b55bba;
-        }
-
-        .service-box:nth-child(4) .service-icon {
-            background: #9c5dcd;
-        }
-
-        .service-box:nth-child(5) .service-icon {
-            background: #8760dc;
-        }
-
-        /* ----------------------------------------
-   TEXT STYLES
------------------------------------------ */
-        .service-title {
-            margin-top: 25px;
-            font-size: 20px;
+        /* Title */
+        .pill-title {
+            font-size: 26px;
+            margin: 0 0 10px;
             font-weight: 700;
         }
 
-        .service-text {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 20px;
-            padding: 0 5px;
+        /* Description */
+        .pill-desc {
+            font-size: 16px;
+            line-height: 1.4;
         }
 
-        .service-more {
-            color: #5948ff;
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
+        /* Tablet */
+        @media (max-width: 768px) {
+            .pill-card {
+                height: 350px;
+                border-radius: 160px;
+            }
         }
 
-        .service-more:hover {
-            text-decoration: underline;
-        }
-
-        /* ----------------------------------------
-   📱 MOBILE RESPONSIVE FIXES
-   Cards full-width on mobile
------------------------------------------ */
+        /* ----------------------
+   📱 MOBILE - 2 per row
+   ---------------------- */
         @media (max-width: 576px) {
 
-            .service-box {
-                width: 100%;
-                /* ⭐ full width on mobile */
-                max-width: 100%;
-                /* ⭐ remove boundaries */
-                padding: 30px 20px;
-                min-height: auto;
+            .flex-row {
+                flex-wrap: wrap;
             }
 
-            .service-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 28px;
+            .pill-wrapper {
+                flex: 0 0 48%;
+                transition: none;
             }
 
-            .service-title {
+            .pill-wrapper.active,
+            .pill-wrapper.shrink {
+                flex: 0 0 48% !important;
+            }
+
+            .pill-card {
+                height: 260px;
+                border-radius: 120px;
+            }
+
+            /* Title & description visible always on mobile */
+            .pill-content {
+                opacity: 1;
+                transform: translateY(0);
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .pill-title {
                 font-size: 18px;
             }
 
-            .service-text {
-                font-size: 14px;
+            .pill-desc {
+                font-size: 13px;
+            }
+        }
+
+        /* 📱 MOBILE FIX — 2 Cards per row + equal gaps + bigger height + last card full width */
+        @media (max-width: 576px) {
+
+            .flex-row {
+                flex-wrap: wrap;
+                gap: 14px !important;
+                /* same gap everywhere */
+            }
+
+            /* Cards 1–4: two per row */
+            .pill-wrapper:nth-child(-n+4) {
+                flex: 0 0 48% !important;
+                /* 2 cards per line */
+            }
+
+            /* Increase height for 1,2,3,4 to reduce vertical gap */
+            .pill-wrapper:nth-child(-n+4) .pill-card {
+                height: 300px !important;
+                /* taller cards */
+                border-radius: 30px !important;
+                /* small curve */
+            }
+
+            /* Last card (5th): full width */
+            .pill-wrapper:nth-child(5) {
+                flex: 0 0 100% !important;
+            }
+
+            .pill-wrapper:nth-child(5) .pill-card {
+                height: 280px !important;
+                border-radius: 30px !important;
+            }
+
+            /* Content always visible on mobile */
+            .pill-content {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+                bottom: 20px !important;
+                left: 20px !important;
+            }
+
+            .pill-title {
+                font-size: 18px !important;
+            }
+
+            .pill-desc {
+                font-size: 13px !important;
             }
         }
     </style>
 
 
+    <script>
+        const wrappers = document.querySelectorAll('.pill-wrapper');
 
+        wrappers.forEach(wrapper => {
+            wrapper.addEventListener('mouseenter', () => {
+                wrapper.classList.add('active');
+                wrappers.forEach(w => { if (w !== wrapper) w.classList.add('shrink'); });
+            });
 
-
-
-
-
-
-
+            wrapper.addEventListener('mouseleave', () => {
+                wrappers.forEach(w => w.classList.remove('active', 'shrink'));
+            });
+        });
+    </script>
 
 
 
