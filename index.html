@@ -233,7 +233,7 @@
                 <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
             </a>
         </div>
-    </section><br>
+    </section>
 
 
 
@@ -242,15 +242,16 @@
 
 
     <section class="pill-section py-5">
-        <div class="text-center mb-4">
+        <div class="text-center ">
             <h2 class="fw-bold text">How can we help your business?</h2><br>
         </div>
+
         <div class="container">
-            <div class="row flex-row cards-row">
+            <div class="pill-row flex-row cards-row">
 
                 <!-- CARD 1 -->
                 <div class="pill-wrapper">
-                    <div class="pill-card" style="background-image:url('/Assets/1.jpg');">
+                    <div class="pill-card" style="background-image:url('/Assets/1\ \(2\).jpg');">
                         <div class="overlay"></div>
                         <div class="pill-content">
                             <h3 class="pill-title">Generate Leads</h3>
@@ -310,32 +311,30 @@
 
 
 
-
-
     <style>
-        /* Row behaves like flex for width expand */
-        .flex-row {
+        /* Parent row — no Bootstrap row control */
+        .pill-row {
             display: flex !important;
-            gap: 10px;
+            gap: 18px;
         }
 
-        /* Default wrapper size */
+        /* Default card wrapper */
         .pill-wrapper {
             flex: 1;
             transition: flex 0.5s ease;
         }
 
-        /* Hover expand */
+        /* Hover grow animation */
         .pill-wrapper.active {
             flex: 5;
         }
 
-        /* Others shrink */
+        /* Non-hover cards shrink */
         .pill-wrapper.shrink {
             flex: 0.5;
         }
 
-        /* Pill card style */
+        /* Pill card */
         .pill-card {
             height: 600px;
             border-radius: 200px;
@@ -347,7 +346,7 @@
             transition: all 0.4s ease;
         }
 
-        /* Curve reduces on hover */
+        /* Reduce curve on hover */
         .pill-wrapper.active .pill-card {
             border-radius: 50px;
         }
@@ -364,7 +363,7 @@
             background: rgba(0, 0, 0, 0.6);
         }
 
-        /* Content box */
+        /* Hidden content (titles & desc) */
         .pill-content {
             position: absolute;
             bottom: 40px;
@@ -376,26 +375,24 @@
             color: #fff;
         }
 
-        /* Show title + desc on hover */
+        /* Show on hover */
         .pill-wrapper.active .pill-content {
             opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0);
         }
 
-        /* Title */
         .pill-title {
             font-size: 26px;
-            margin: 0 0 10px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
-        /* Description */
         .pill-desc {
             font-size: 16px;
             line-height: 1.4;
         }
 
-        /* Tablet */
+        /* Tablet fix */
         @media (max-width: 768px) {
             .pill-card {
                 height: 350px;
@@ -403,71 +400,29 @@
             }
         }
 
-        /* ----------------------
-   📱 MOBILE - 2 per row
-   ---------------------- */
+        /* -----------------------------------------
+📱 MOBILE FIX (<= 576px)
+------------------------------------------ */
         @media (max-width: 576px) {
 
-            .flex-row {
-                flex-wrap: wrap;
+            /* Remove row problem + reduce gap */
+            .pill-row {
+                flex-wrap: wrap !important;
+                gap: 6px !important;
             }
 
-            .pill-wrapper {
-                flex: 0 0 48%;
-                transition: none;
-            }
-
-            .pill-wrapper.active,
-            .pill-wrapper.shrink {
-                flex: 0 0 48% !important;
-            }
-
-            .pill-card {
-                height: 260px;
-                border-radius: 120px;
-            }
-
-            /* Title & description visible always on mobile */
-            .pill-content {
-                opacity: 1;
-                transform: translateY(0);
-                bottom: 20px;
-                left: 20px;
-            }
-
-            .pill-title {
-                font-size: 18px;
-            }
-
-            .pill-desc {
-                font-size: 13px;
-            }
-        }
-
-        /* 📱 MOBILE FIX — 2 Cards per row + equal gaps + bigger height + last card full width */
-        @media (max-width: 576px) {
-
-            .flex-row {
-                flex-wrap: wrap;
-                gap: 14px !important;
-                /* same gap everywhere */
-            }
-
-            /* Cards 1–4: two per row */
+            /* Cards 1–4 = 2 per row, wider to close gap */
             .pill-wrapper:nth-child(-n+4) {
-                flex: 0 0 48% !important;
-                /* 2 cards per line */
+                flex: 0 0 49% !important;
             }
 
-            /* Increase height for 1,2,3,4 to reduce vertical gap */
+            /* Increase height for better grid stacking */
             .pill-wrapper:nth-child(-n+4) .pill-card {
-                height: 300px !important;
-                /* taller cards */
+                height: 290px !important;
                 border-radius: 30px !important;
-                /* small curve */
             }
 
-            /* Last card (5th): full width */
+            /* Last card = full width */
             .pill-wrapper:nth-child(5) {
                 flex: 0 0 100% !important;
             }
@@ -477,16 +432,17 @@
                 border-radius: 30px !important;
             }
 
-            /* Content always visible on mobile */
+            /* Always show content */
             .pill-content {
                 opacity: 1 !important;
                 transform: translateY(0) !important;
-                bottom: 20px !important;
-                left: 20px !important;
+                bottom: 18px !important;
+                left: 18px !important;
             }
 
             .pill-title {
                 font-size: 18px !important;
+                margin-bottom: 6px;
             }
 
             .pill-desc {
@@ -494,6 +450,7 @@
             }
         }
     </style>
+
 
 
     <script>
