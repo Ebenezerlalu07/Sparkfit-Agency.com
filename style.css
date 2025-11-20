@@ -915,7 +915,7 @@ body {
     }
 
     .robot {
-        max-width: 140px !important;
+        max-width: 150px !important;
         margin: 15px auto;
     }
 
@@ -994,7 +994,7 @@ body {
     }
 
     .robot {
-        max-width: 200px !important;
+        max-width: 230px !important;
         /* ⬅ smaller robot */
     }
 
