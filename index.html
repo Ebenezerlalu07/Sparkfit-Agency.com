@@ -311,6 +311,7 @@
 
 
 
+
     <style>
         /* Parent row — no Bootstrap row control */
         .pill-row {
@@ -543,7 +544,7 @@
 
 
     <!-- DIGITAL MARKETING SECTION -->
-    <section class="animate left py-3 text-center bg-white">
+    <section class="animate left  text-center bg-white">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class="fw-bold text">Digital Marketing</h2>
@@ -739,6 +740,152 @@
             });
         });
     </script>
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <section class="client-section">
+        <div class="container text-center">
+            <!-- <div class="text-center mb-4">
+                <h2 class="fw-bold text">Our Partners</h2>
+                <p>More than reviews - real results</p>
+            </div> -->
+
+            <div class="swiper clientSwiper mt-5">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/google.png" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/stripe-3.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/gmail.png" class="client-logo">
+                    </div>
+
+                    <!-- duplicates -->
+                    <div class="swiper-slide">
+                        <img src="/Assets/google.png" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/gitlab.png" class="client-logo">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <style>
+        .swiper-slide {
+            min-width: 140px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .client-section {
+            background: #fff;
+        }
+
+        .client-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .client-title {
+            font-size: 34px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Logo size */
+        .client-logo {
+            max-height: 65px;
+            width: auto;
+            opacity: 0.85;
+            transition: 0.3s;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Remove slide width gaps */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 576px) {
+            .client-logo {
+                max-height: 40px !important;
+                /* reduce logo size */
+                opacity: 0.8;
+            }
+
+            .swiper-slide {
+                min-width: 100px !important;
+                /* smaller slide width */
+            }
+        }
+    </style>
+
+    <script>
+        var swiper = new Swiper(".clientSwiper", {
+            slidesPerView: 5,
+            spaceBetween: 40,
+            loop: true,
+            speed: 4000,               // smooth continuous movement
+            autoplay: {
+                delay: 0,             // no pause
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { slidesPerView: 2 },
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                992: { slidesPerView: 5 }
+            }
+        });
+    </script>
+
+
+
+
+
 
 
 
@@ -1112,125 +1259,6 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <section class="client-section">
-        <div class="container text-center">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text">Our Partners</h2>
-                <p>More than reviews - real results</p>
-            </div>
-
-            <div class="swiper clientSwiper mt-5">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <img src="/Assets/google.png" class="client-logo">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="https://cdn.worldvectorlogo.com/logos/stripe-3.svg" class="client-logo">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="/Assets/gmail.png" class="client-logo">
-                    </div>
-
-                    <!-- duplicates -->
-                    <div class="swiper-slide">
-                        <img src="/Assets/google.png" class="client-logo">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="/Assets/gitlab.png" class="client-logo">
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section><br><br>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-
-    <style>
-        .swiper-slide {
-            min-width: 140px !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .client-logo {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .client-section {
-            background: #fff;
-        }
-
-        .client-subtitle {
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        .client-title {
-            font-size: 34px;
-            font-weight: 700;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        /* Logo size */
-        .client-logo {
-            max-height: 65px;
-            width: auto;
-            opacity: 0.85;
-            transition: 0.3s;
-        }
-
-        .client-logo:hover {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-
-        /* Remove slide width gaps */
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-
-    <script>
-        var swiper = new Swiper(".clientSwiper", {
-            slidesPerView: 5,
-            spaceBetween: 40,
-            loop: true,
-            speed: 4000,               // smooth continuous movement
-            autoplay: {
-                delay: 0,             // no pause
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: { slidesPerView: 2 },
-                576: { slidesPerView: 3 },
-                768: { slidesPerView: 4 },
-                992: { slidesPerView: 5 }
-            }
-        });
-    </script>
 
 
 
