@@ -676,7 +676,7 @@
 
 
     <!-- SERVICES SECTION -->
-    <section class="animate left services-section py-5 bg-white">
+    <section class="animate left services-section  bg-white">
         <div class="container">
             <!-- Heading Row -->
             <div class="row mb-5 align-items-center">
@@ -821,73 +821,219 @@
 
 
 
-    <section class="animate left py-2 text-center bg-white">
-        <div class="container">
-            <h2 class="funneltext text fw-bold">
-                Our Signature Funnel System
-            </h2>
 
-            <!-- Desktop Image -->
-            <img src="/Assets/infographic_11.png" alt="Our Signature Funnel System" class="img-fluid mt-3 desktop-img"
-                style="width:100%; height:auto;">
 
-            <!-- Mobile Images -->
-            <div class="mobile-imgs mt-3">
-                <img src="/Assets/Funnel 1.png" alt="Mobile Funnel Image 1" class="img-fluid mb-3 mobile-img"
-                    style="height:auto;">
-                <img src="/Assets/Funnel 2.png" alt="Mobile Funnel Image 2" class="img-fluid mobile-img"
-                    style="height:auto;">
+
+
+
+    <section class="container  round-section py-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text">Our Signature Funnel System</h2>
+        </div>
+
+        <div class="container Funnel-bg">
+            <div class="round-row ">
+
+                <div class="round-box">
+                    <div class="round-card" style="background-image:url('/Assets/SEO Robot.png');"></div>
+                    <div class="round-text">
+                        <h5 class="text">Lead Generation</h5>
+                        <p class="paragraph">Boost conversions with proven strategies.</p>
+                    </div>
+                </div>
+
+                <div class="round-box">
+                    <div class="round-card" style="background-image:url('/Assets/Marketing  Robot.png');"></div>
+                    <div class="round-text">
+                        <h5 class="text">Web Design</h5>
+                        <p class="paragraph">Modern websites built to convert.</p>
+                    </div>
+                </div>
+
+                <div class="round-box">
+                    <div class="round-card" style="background-image:url('/Assets/Performance robot.png');"></div>
+                    <div class="round-text">
+                        <h5 class="text">AI Automation</h5>
+                        <p class="paragraph">Automate your marketing with AI.</p>
+                    </div>
+                </div>
+
+                <div class="round-box">
+                    <div class="round-card" style="background-image:url('/Assets/SMMA Robot.png');"></div>
+                    <div class="round-text">
+                        <h5 class="text">Target Audience</h5>
+                        <p class="paragraph">Reach customers with precision targeting.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+
     <style>
-        /* Default: show desktop image, hide mobile images */
-        .desktop-img {
-            display: block;
+        /* ================================
+   ROW LAYOUT
+================================ */
+        .round-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 45px;
+            flex-wrap: wrap;
         }
 
-        .mobile-imgs {
-            display: none;
+        /* =======================================
+   FULL BACKGROUND IMAGE FOR ENTIRE SECTION
+======================================= */
+        .Funnel-bg {
+            background-image: url('');
+            background-size: 65%;
+            /* reduced from full cover */
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            /* fixed removed for cleaner small image */
+
+            border-radius: 20px;
+            padding: 20px 20px;
+            /* slightly more padding for layout balance */
         }
 
-        /* Media query for mobile devices */
-        @media (max-width: 767.98px) {
-            .desktop-img {
-                display: none !important;
-                /* hide desktop image */
+        
+
+
+        /* ================================
+   BOX (image + text)
+================================ */
+        .round-box {
+            width: 260px;
+            text-align: center;
+
+            /* fade-in animation */
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeIn 1.3s ease forwards;
+        }
+
+        .round-box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .round-box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .round-box:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .round-box:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        /* ================================
+   ROUND IMAGE
+================================ */
+        .round-card {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+
+            /* Auto floating animation */
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* ================================
+   TEXT BELOW IMAGE
+================================ */
+        .round-text {
+            margin-top: 30px;
+        }
+
+        .round-text h5.text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .round-text p.paragraph {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            color: #000;
+        }
+
+        /* ================================
+   ANIMATION KEYFRAMES
+================================ */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* soft floating animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
             }
 
-            .mobile-imgs {
-                display: block !important;
-                /* show mobile images */
+            50% {
+                transform: translateY(-12px);
             }
 
-            .mobile-imgs .mobile-img {
-                width: 90%;
-                margin: 0 auto;
-                /* centers horizontally */
-                display: block;
-                /* ensures centering works */
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Optional rotation (uncomment if needed)
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+*/
+
+        /* ================================
+   MOBILE (≤576px)
+================================ */
+        @media (max-width: 576px) {
+
+            .round-section {
+                padding-top: 60px !important;
+                padding-bottom: 60px !important;
             }
 
-            .funneltext {
-                font-size: 1.6rem;
+            .round-box {
+                width: 48%;
+            }
+
+            .round-card {
+                border-radius: 25px;
+
+                /* softer float for small screens */
+                animation: float 5s ease-in-out infinite;
+            }
+
+            .round-text {
+                margin-top: 20px;
+            }
+
+            .round-text h5.text {
+                font-size: 15px;
+            }
+
+            .round-text p.paragraph {
+                font-size: 12px;
             }
         }
     </style>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
