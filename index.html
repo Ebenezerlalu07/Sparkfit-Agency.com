@@ -108,10 +108,10 @@
             </video> </div> <!-- Dark Overlay -->
         <div class="position-absolute top-0 start-0 w-100 h-100 rounded-4"
             style="background: rgba(0, 0, 0, 0.55); z-index: 1;"></div> <!-- Content -->
-        <div class="container text-center position-relative z-2 text-white px-3">
-            <h2 class="hero-title text-uppercase mb-3 text-shadow"> Boosting Business Growth Speedily </h2>
-            <p class="mb-4 ai text-shadow"> AI-Powered Digital Marketing Agency Guaranteed Growth in <strong>60–90
-                    Days</strong> or You Don’t Pay </p> <!-- Centered Buttons -->
+        <div class="container text-center position-relative z-2 text-white px-2">
+            <h3 class="hero-title text-uppercase mb-3 text-shadow"> Boosting Business Growth Speedily </h3>
+            <h6 class="mb-4 ai text-shadow"> AI-Powered Digital Marketing Agency Guaranteed Growth in <strong>60–90
+                    Days</strong> or You Don’t Pay </h6> <!-- Centered Buttons -->
             <div class="d-flex justify-content-center gap-3 flex-wrap mb-4"> <a href="/Pages/contact.html"
                     class="btn-modern filled ai-glow"> <span>Get in Touch</span> <span class="circle"><i
                             class="bi bi-arrow-up-right"></i></span> </a> <a
@@ -255,7 +255,7 @@
                         <div class="overlay"></div>
                         <div class="pill-content">
                             <h3 class="pill-title">Generate Leads</h3>
-                            <p class="pill-desc">Convert customers faster with proven strategies.</p>
+                            <p class="pill-desc">That Convert Customers Fast </p>
                         </div>
                     </div>
                 </div>
@@ -265,8 +265,8 @@
                     <div class="pill-card" style="background-image:url('/Assets/2.jpg');">
                         <div class="overlay"></div>
                         <div class="pill-content">
-                            <h3 class="pill-title">Modern Web Design</h3>
-                            <p class="pill-desc">Create websites that drive sales effectively.</p>
+                            <h3 class="pill-title">Design Websites</h3>
+                            <p class="pill-desc">That Drive Conversions</p>
                         </div>
                     </div>
                 </div>
@@ -276,8 +276,8 @@
                     <div class="pill-card" style="background-image:url('/Assets/3.jpg');">
                         <div class="overlay"></div>
                         <div class="pill-content">
-                            <h3 class="pill-title">AI Automation</h3>
-                            <p class="pill-desc">Automate marketing using powerful AI tools.</p>
+                            <h3 class="pill-title">Automate Marketing</h3>
+                            <p class="pill-desc">With AI Precision</p>
                         </div>
                     </div>
                 </div>
@@ -287,8 +287,8 @@
                     <div class="pill-card" style="background-image:url('/Assets/4.jpg');">
                         <div class="overlay"></div>
                         <div class="pill-content">
-                            <h3 class="pill-title">Target Audience</h3>
-                            <p class="pill-desc">Reach customers with precision targeting.</p>
+                            <h3 class="pill-title">Target Audiences</h3>
+                            <p class="pill-desc">Using Smart Technology</p>
                         </div>
                     </div>
                 </div>
@@ -298,8 +298,8 @@
                     <div class="pill-card" style="background-image:url('/Assets/5.jpg');">
                         <div class="overlay"></div>
                         <div class="pill-content">
-                            <h3 class="pill-title">Digital Growth</h3>
-                            <p class="pill-desc">Boost growth through digital innovation.</p>
+                            <h3 class="pill-title">Guarantee Growth </h3>
+                            <p class="pill-desc">Through Digital Innovation</p>
                         </div>
                     </div>
                 </div>
@@ -464,6 +464,75 @@
 
             wrapper.addEventListener('mouseleave', () => {
                 wrappers.forEach(w => w.classList.remove('active', 'shrink'));
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrappers = Array.from(document.querySelectorAll('.pill-wrapper'));
+
+            if (!wrappers || wrappers.length === 0) {
+                console.warn('No .pill-wrapper elements found. Check your markup.');
+                return;
+            }
+
+            // helper to reset classes
+            const resetAll = () => {
+                wrappers.forEach(w => w.classList.remove('active', 'shrink'));
+            };
+
+            // Open the first pill by default
+            resetAll();
+            wrappers[0].classList.add('active');
+            wrappers.forEach((w, i) => { if (i !== 0) w.classList.add('shrink'); });
+
+            // Hover behavior (desktop)
+            wrappers.forEach(wrapper => {
+                wrapper.addEventListener('mouseenter', () => {
+                    resetAll();
+                    wrapper.classList.add('active');
+                    wrappers.forEach(w => { if (w !== wrapper) w.classList.add('shrink'); });
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    // restore default state (first open)
+                    resetAll();
+                    wrappers[0].classList.add('active');
+                    wrappers.forEach((w, i) => { if (i !== 0) w.classList.add('shrink'); });
+                });
+            });
+
+            // Touch/click support (mobile)
+            // Single tap opens the tapped pill. Tapping outside or tapping same card again
+            // will return to default (first open).
+            wrappers.forEach((wrapper, idx) => {
+                wrapper.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = wrapper.classList.contains('active');
+
+                    if (!isActive) {
+                        resetAll();
+                        wrapper.classList.add('active');
+                        wrappers.forEach(w => { if (w !== wrapper) w.classList.add('shrink'); });
+                    } else {
+                        // if already active, restore default (first)
+                        resetAll();
+                        wrappers[0].classList.add('active');
+                        wrappers.forEach((w, i) => { if (i !== 0) w.classList.add('shrink'); });
+                    }
+                });
+            });
+
+            // Click anywhere else on the document to restore default (useful on mobile)
+            document.addEventListener('click', (e) => {
+                // if user clicked outside wrappers, restore first active
+                if (!e.target.closest('.pill-wrapper')) {
+                    resetAll();
+                    wrappers[0].classList.add('active');
+                    wrappers.forEach((w, i) => { if (i !== 0) w.classList.add('shrink'); });
+                }
             });
         });
     </script>
@@ -676,7 +745,7 @@
 
 
     <!-- SERVICES SECTION -->
-    <section class="animate left services-section  bg-white">
+    <section class="animate left services-section py-4 bg-white">
         <div class="container">
             <!-- Heading Row -->
             <div class="row mb-5 align-items-center">
@@ -826,7 +895,7 @@
 
 
 
-    <section class="container  round-section py-4">
+    <section class="container  round-section py-2">
         <div class="text-center mb-4">
             <h2 class="fw-bold text">Our Signature Funnel System</h2>
             <p>60-90 days result-driven streamline workflow </p>
@@ -836,7 +905,7 @@
             <div class="round-row ">
 
                 <div class="round-box">
-                    <div class="round-card" style="background-image:url('/Assets/SEO Robot.png');"></div>
+                    <div class="round-card" style="background-image:url('/Assets/UIUX.jpg');"></div>
                     <div class="round-text">
                         <h5 class="text">Data Collection</h5>
                         <p class="paragraph">Begin with a conversation to understand your goals and expectations.</p>
@@ -844,32 +913,35 @@
                 </div>
 
                 <div class="round-box">
-                    <div class="round-card" style="background-image:url('/Assets/Marketing  Robot.png');"></div>
+                    <div class="round-card" style="background-image:url('/Assets/Scalable\ Architecture.jpg');"></div>
                     <div class="round-text">
                         <h5 class="text">Research & Analysis</h5>
-                        <p class="paragraph">Study your business, track competitors, achieve sustainable growth.in 60-90 days</p>
+                        <p class="paragraph">Study your business, track competitors, achieve sustainable growth.in 60-90
+                            days</p>
                     </div>
                 </div>
 
                 <div class="round-box">
-                    <div class="round-card" style="background-image:url('/Assets/Performance robot.png');"></div>
+                    <div class="round-card" style="background-image:url('/Assets/Mobile\ App\ Development.png');"></div>
                     <div class="round-text">
                         <h5 class="text">Execute & Boost Profits</h5>
-                        <p class="paragraph">Implement an effective Funnel system powered by AI after gathering valuable insights.</p>
+                        <p class="paragraph">Implement an effective Funnel system powered by AI after gathering valuable
+                            insights.</p>
                     </div>
                 </div>
 
                 <div class="round-box">
-                    <div class="round-card" style="background-image:url('/Assets/SMMA Robot.png');"></div>
+                    <div class="round-card" style="background-image:url('/Assets/Web\ Development.png');"></div>
                     <div class="round-text">
                         <h5 class="text">Evalution & Adjustment </h5>
-                        <p class="paragraph">Monitor performance continuously and optimize regularly necessary to reach your goals.</p>
+                        <p class="paragraph">Monitor performance continuously and optimize regularly necessary to reach
+                            your goals.</p>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
+    </section><br>
 
 
     <style>
@@ -1039,6 +1111,124 @@
 
 
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <section class="client-section py-5">
+        <div class="container text-center">
+            <h5 class="client-subtitle">Our Clients</h5>
+            <h2 class="client-title">Don't Take Our Word For It</h2>
+
+            <div class="swiper clientSwiper mt-5">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/google.png" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/stripe-3.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/gmail.png" class="client-logo">
+                    </div>
+
+                    <!-- duplicates -->
+                    <div class="swiper-slide">
+                        <img src="/Assets/google.png" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://cdn.worldvectorlogo.com/logos/reddit-1.svg" class="client-logo">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/Assets/gitlab.png" class="client-logo">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <style>
+        .swiper-slide {
+            min-width: 140px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .client-section {
+            background: #fff;
+        }
+
+        .client-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .client-title {
+            font-size: 34px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Logo size */
+        .client-logo {
+            max-height: 65px;
+            width: auto;
+            opacity: 0.85;
+            transition: 0.3s;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Remove slide width gaps */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        var swiper = new Swiper(".clientSwiper", {
+            slidesPerView: 5,
+            spaceBetween: 40,
+            loop: true,
+            speed: 4000,               // smooth continuous movement
+            autoplay: {
+                delay: 0,             // no pause
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { slidesPerView: 2 },
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                992: { slidesPerView: 5 }
+            }
+        });
+    </script>
 
 
 
