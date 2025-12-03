@@ -43,7 +43,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="active nav-link dropdown-toggle" href="/Digital/seo.html" role="button"
+                        <a class=" nav-link dropdown-toggle" href="/Digital/seo.html" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Digital Marketing
                         </a>
@@ -56,14 +56,15 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Design & Dev
                         </a>
                         <ul class="dropdown-menu rounded-4 shadow-sm">
                             <li><a class="dropdown-item" href="/Design&web/webdev.html">Web Development</a></li>
-                            <li><a class="dropdown-item" href="/Design&web/design.html">Web Design</a></li>
+                            <li><a class="  dropdown-item" href="/Design&web/design.html">Web Design</a></li>
                             <li><a class="dropdown-item" href="/Design&web/mobileapp.html">Mobile App Development</a>
+                            <li><a class="dropdown-item" href="/Design&web/chatbot.html">AI Chatbots Development</a>
                             </li>
                         </ul>
                     </li>
@@ -100,7 +101,7 @@
     <section class="banner-section" style="position: relative;">
 
         <!-- Banner Image -->
-        <img src="/Assets/Performance marketing.jpg" alt="Banner Image" class="img-fluid w-100"
+        <img src="/Assets/chatbt banner.jpg" alt="Banner Image" class="img-fluid w-100"
             style="height:60vh; object-fit:cover; width:100%; display:block;">
 
         <!-- Centered Title -->
@@ -120,7 +121,7 @@
             text-shadow: 0px 2px 8px rgba(0,0,0,0.8);
             margin: 0;
         ">
-                Performance Marketing
+                AI Chatbot
             </h1>
         </div>
 
@@ -131,434 +132,165 @@
         <div
             class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
             <h4 class="text mb-3 mb-md-0 text-white fw-normal">
-                Turn Every Click into Revenue with Precision Marketing Strategies.
+                Discover a smart automation system to optimize your business workflow.
             </h4>
-            <a href="/Pages/contact.html" class="cta-btn">
-                Get in Touch
+            <a href="#contact" class="cta-btn">
+                Lets talk
                 <span class="arrow-circle"><i class="bi bi-arrow-up-right"></i></span>
             </a>
         </div>
     </section><br>
 
 
-    <!-- EXPERTISE SECTION (Side Slide Animation) -->
-    <section class=" py-5 bg-white">
-        <div class="container text-center">
-            <h2 class="animate left fw-bold text  mb-3">
-                Our Specialization, Data-Driven Performance Marketing
-            </h2><br>
 
-            <div class="row g-4 justify-content-center">
-                <style>
-                    .expertise-card {
-                        position: relative;
-                        text-align: left;
-                        border-radius: 20px;
-                        padding: 2rem;
-                        height: 100%;
-                        min-height: 260px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
-                        opacity: 0;
-                    }
 
-                    /* Slide from left */
-                    .slide-left {
-                        transform: translateX(-100px);
-                    }
 
-                    /* Slide from right */
-                    .slide-right {
-                        transform: translateX(100px);
-                    }
+    <!-- OUR SPECIALIZATION SECTION -->
+    <section class="animate left specialization-section container py-2">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text fw-bold">Our Specialization</h2>
+            <div class="d-flex gap-2">
+                <button class="carousel-btn btn btn-light rounded-circle" id="prevBtn">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="carousel-btn btn btn-light rounded-circle" id="nextBtn">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
 
-                    /* Slide from bottom */
-                    .slide-bottom {
-                        transform: translateY(50px);
-                    }
-
-                    .expertise-card.visible {
-                        transform: translateX(0) translateY(0);
-                        opacity: 1;
-                    }
-
-                    .expertise-card:hover {
-                        transform: translateY(-5px);
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-                    }
-
-                    .expertise-icon {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                        background: #fff;
-                        color: #6A37A5;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 1.4rem;
-                        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-                        position: absolute;
-                        bottom: 1.5rem;
-                        right: 1.5rem;
-                        transition: all 0.3s ease;
-                    }
-
-                    .expertise-icon:hover {
-                        background: #6A37A5;
-                        color: #fff;
-                    }
-
-                    .expertise-card p {
-                        margin-bottom: 3rem;
-                    }
-
-                    .expertise-card h5 {
-                        font-size: 1.6rem;
-                        font-weight: 800;
-                    }
-
-                    @media (max-width: 768px) {
-                        .expertise-card {
-                            min-height: 220px;
-                        }
-
-                        .expertise-icon {
-                            width: 40px;
-                            height: 40px;
-                            font-size: 1.2rem;
-                            bottom: 1rem;
-                            right: 1rem;
-                        }
-
-                        h2 {
-                            font-size: 1.8rem !important;
-                        }
-
-                        .expertise-card h5 {
-                            font-size: 1.3rem;
-                            font-weight: 700;
-                        }
-                    }
-                </style>
+        <div class="overflow-hidden position-relative">
+            <div class="d-flex flex-nowrap gap-4 scroll-container" id="cardContainer">
 
                 <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="expertise-card slide-left w-100" style="background:#f4eef9;">
-                        <div>
-                            <h5 class="fw-bold">Data-Driven Approach</h5>
-                            <p class="opacity-90">We use real-time data and analytics to make informed decisions that
-                                maximize ROI.</p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/User-Centered Design.jpg" class="card-img-top" alt="Custom Solutions"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">AI Chatbots (Text)</h5>
+                        <p class="text-muted mb-0">We craft interfaces rooted in deep user research, ensuring every
+                            click feels intuitive aOmnichannel assistants for WhatsApp, Instagram, Facebook, websites
+                            and more delivering instant, accurate responses 24/7.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="expertise-card slide-bottom w-100 text-white" style="background:#7b1fa2;">
-                        <div>
-                            <h5 class="fw-bold">ROI-Focused</h5>
-                            <p class="opacity-90">Our goal is simple - to drive results that make a measurable impact on
-                                your business.</p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Conversion-Focused UI.jpg" class="card-img-top" alt="Performance Optimized"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Voice AI Assistants</h5>
+                        <p class="text-muted mb-0">Natural, human-sounding voice bots that handle calls, inquiries,
+                            reservations, reminders and customer support.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <div class="expertise-card slide-right w-100" style="background:#f4eef9;">
-                        <div>
-                            <h5 class="fw-bold">Custom Strategies</h5>
-                            <p class="text-muted"> Every business is unique, so we create tailored marketing strategies
-                                that align with your goals and audience.
-                            </p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Rapid Prototyping & Testing.jpg" class="card-img-top" alt="Responsive Design"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Business Process Automation</h5>
+                        <p class="text-muted mb-0">Automated workflows that eliminate repetitive tasks: follow-ups,
+                            confirmations, reminders, internal coordination, onboarding.</p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="col-lg-6 col-md-6 d-flex">
-                    <div class="expertise-card slide-left w-100 text-white" style="background:#9C018A;">
-                        <div>
-                            <h5 class="fw-bold">Multi-Channel Expertise</h5>
-                            <p class="opacity-90">We work across Google Ads, Facebook/Instagram Ads, Affiliate
-                                Marketing, and more to reach your audience where they are.</p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Brand-Integrated Visual Systems.jpg" class="card-img-top"
+                        alt="E-commerce Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Brand-Integrated Visual Systems</h5>
+                        <p class="text-muted mb-0">Cohesive, on-brand design systems that not only look great but stay
+                            consistent as you scale.</p>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
-                <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="expertise-card slide-bottom w-100" style="background:#fbe5f7;">
-                        <div>
-                            <h5 class="fw-bold">Transparent Reporting</h5>
-                            <p class="text-muted">We provide clear, easy-to-understand reports so you always know how
-                                your campaigns are performing.</p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Mobile-First & Responsive.jpg" class="card-img-top" alt="Cloud Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Business Intelligence & Analytics</h5>
+                        <p class="text-muted mb-0">We transform raw data into actionable insights: sales performance,
+                            customer behavior, trends, segments, churn detection and growth opportunities.</p>
                     </div>
                 </div>
 
-                <!-- Card 6 -->
-                <!-- <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="expertise-card slide-right w-100 text-white" style="background:#9C018A;">
-                        <div>
-                            <h5 class="fw-bold">Analytics & Reporting</h5>
-                            <p class="opacity-90">Track campaign performance with automated reports for better
-                                decision-making.</p>
-                        </div>
-                        <div class="expertise-icon"><i class="bi bi-arrow-up-right"></i></div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
-    </section>
+    </section><br>
+
+
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Scroll animation with side slide
-            const cards = document.querySelectorAll('.expertise-card');
+        const cardContainer = document.getElementById('cardContainer');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
+        nextBtn.addEventListener('click', () => {
+            cardContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
 
-            cards.forEach(card => observer.observe(card));
+        prevBtn.addEventListener('click', () => {
+            cardContainer.scrollBy({ left: -320, behavior: 'smooth' });
         });
     </script>
 
+    <style>
+        .scroll-container {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
 
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            background-color: #9b135d;
+            color: white;
+            border: none;
+        }
 
+        .carousel-btn:hover {
+            background-color: #7a0f4a;
+        }
 
-
-
-
-
-    <section class="animate left container strategy-wrap bordered-section">
-
-        <!-- TITLE -->
-        <h2 class="text-center fw-bold text animate left py-2">
-            Performance Marketing Roadmap, Turning Visibility into Results !
-        </h2><br><br>
-
-        <div class="strategy-inner">
-
-            <!-- LEFT COLUMN (Step 1 & Step 2) -->
-            <div class="grid-col left-col">
-
-                <!-- Step 1 -->
-                <article class="card-like purple" data-step="1">
-                    <span class="step-tag">Step 1</span>
-                    <div class="icon-wrap"><i data-lucide="goal"></i></div>
-                    <h3>Understand Goals</h3>
-                    <p>We get to know your business and objectives to design a results-driven plan.</p>
-                </article>
-
-                <!-- Step 2 -->
-                <article class="card-like" data-step="2">
-                    <span class="step-tag">Step 2</span>
-                    <div class="icon-wrap"><i data-lucide="scan-search"></i></div>
-                    <h3>Analyze & Strategize</h3>
-                    <p>We review current performance and craft a tailored marketing strategy using the best channels.
-                    </p>
-                </article>
-
-            </div>
-
-            <!-- CENTER IMAGE (Robot) -->
-            <div class="robot-col">
-                <div class="robot-wrap">
-                    <img src="/Assets/Performance robot.png" class="robot img-fluid" alt="">
-                </div>
-            </div>
-
-            <!-- RIGHT COLUMN (Step 3 & Step 4) -->
-            <div class="grid-col right-col">
-
-                <!-- Step 3 -->
-                <article class="card-like purple" data-step="3">
-                    <span class="step-tag">Step 3</span>
-                    <div class="icon-wrap"><i data-lucide="gauge"></i></div>
-                    <h3>Set Up & Track</h3>
-                    <p>We implement tracking tools to measure clicks, conversions, and sales accurately.</p>
-                </article>
-
-                <!-- Step 4 -->
-                <article class="card-like" data-step="4">
-                    <span class="step-tag">Step 4</span>
-                    <div class="icon-wrap"><i data-lucide="rocket"></i></div>
-                    <h3>Launch & Optimize Campaigns</h3>
-                    <p>We run ads, constantly testing and refining for higher ROI and engagement.</p>
-                </article>
-
-            </div>
-
-        </div>
-
-        <!-- ⭐ STEP 5 (Bottom Center) -->
-        <div class="bottom-center-card">
-            <article class="card-like purple" data-step="5">
-                <span class="step-tag">Step 5</span>
-                <div class="icon-wrap"><i data-lucide="trending-up"></i></div>
-                <h3>Monitor, Report & Scale</h3>
-                <p>We track results, share transparent reports, and scale what works for maximum growth.</p>
-            </article>
-        </div><br>
-
-    </section>
-    <br><br><br>
-
-
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
-
-    <script>
-        (function () {
-            const state = { moved: false, originals: new Map() };
-
-            function saveOriginal(el) {
-                if (!state.originals.has(el)) {
-                    state.originals.set(el, { parent: el.parentNode, nextSibling: el.nextSibling });
-                }
+        @media (max-width: 768px) {
+            .card {
+                width: 85%;
             }
-
-            function reorderForMobile() {
-                const mobile = window.innerWidth <= 768;
-                const strategyInner = document.querySelector('.strategy-inner');
-                const robotCol = document.querySelector('.robot-col');
-                const allCards = Array.from(document.querySelectorAll('.card-like'));
-
-                if (mobile && !state.moved) {
-                    allCards.forEach(saveOriginal);
-                    saveOriginal(robotCol);
-
-                    let mobileStack = document.createElement('div');
-                    mobileStack.className = "mobile-stack";
-                    mobileStack.style.display = "flex";
-                    mobileStack.style.flexDirection = "column";
-                    mobileStack.style.gap = "16px";
-
-                    const sorted = allCards.sort((a, b) =>
-                        parseInt(a.dataset.step) - parseInt(b.dataset.step)
-                    );
-
-                    sorted.forEach(card => mobileStack.appendChild(card));
-
-                    const leftCol = document.querySelector('.left-col');
-                    strategyInner.insertBefore(robotCol, leftCol.nextSibling);
-                    strategyInner.insertBefore(mobileStack, robotCol.nextSibling);
-
-                    state.moved = true;
-                }
-
-                if (!mobile && state.moved) {
-                    for (let [el, pos] of state.originals.entries()) {
-                        pos.parent.insertBefore(el, pos.nextSibling);
-                    }
-
-                    document.querySelector('.mobile-stack')?.remove();
-                    state.moved = false;
-                }
-            }
-
-            window.addEventListener('DOMContentLoaded', reorderForMobile);
-            window.addEventListener('resize', () => setTimeout(reorderForMobile, 150));
-
-            const cards = document.querySelectorAll('.card-like');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-
-            cards.forEach(card => observer.observe(card));
-        })();
-    </script>
-
-
-
-
-
-
-
-
-
+        }
+    </style>
 
     <!-- SEO SECTION -->
     <section class="py-5 animate left">
         <div class="container">
-            <div class="row align-items-center g-4">
+            <div class="row  g-4">
 
-                <!-- WHY SPARKFIT POINTS -->
-                <div class="col-lg-6 text-start fade-in-on-scroll">
-                    <h2 class="animate left fw-bold text  mb-4">
-                        Why Choose SparkFit?
+                <!-- Left Text -->
+                <div class="col-lg-6 ">
+                    <h2 class="fw-bold text mb-3">
+                        Why Intelligent Automation?
                     </h2>
-                    <ul class="list-unstyled">
-
-                        <li class="d-flex align-items-start mb-3">
-                            <div class="icon-box me-3">
-                                <i class="bi bi-eye text-primary fs-4"></i>
-                            </div>
-                            <div>
-                                <strong>Transparent Reporting</strong>
-                                <span> No guesswork, just clear results.</span>
-                            </div>
-                        </li>
-
-                        <li class="d-flex align-items-start mb-3">
-                            <div class="icon-box me-3">
-                                <i class="bi bi-cpu text-warning fs-4"></i>
-                            </div>
-                            <div>
-                                <strong>Data-Driven Decisions</strong>
-                                <span> We optimize based on real performance.</span>
-                            </div>
-                        </li>
-
-                        <li class="d-flex align-items-start mb-3">
-                            <div class="icon-box me-3">
-                                <i class="bi bi-arrows-expand text-success fs-4"></i>
-                            </div>
-                            <div>
-                                <strong>Flexible & Scalable</strong>
-                                <span> Grow at your own pace.</span>
-                            </div>
-                        </li>
-
-                        <li class="d-flex align-items-start">
-                            <div class="icon-box me-3">
-                                <i class="bi bi-graph-up text-info fs-4"></i>
-                            </div>
-                            <div>
-                                <strong>Performance Insights</strong>
-                                <span> Understand exactly how your social media is performing.</span>
-                            </div>
-                        </li>
-
-                    </ul>
+                    <p class="seo-text">
+                        Our 24/7 automated customer service reduces manual work and human error while ensuring faster
+                        response times across all channels. This leads to higher lead conversion, improved customer
+                        satisfaction, and smarter insights for better decision-making. The system scales effortlessly
+                        without requiring additional staff and is built on secure Swiss infrastructure to guarantee
+                        reliability and data protection.
+                    </p>
                 </div>
-
-
 
                 <!-- Right Image -->
                 <div class="col-lg-6 text-center">
@@ -655,17 +387,358 @@
     </style>
 
 
-    <section class="d-flex align-items-center justify-content-center text-center py-3 bg-white">
+    <section class="animate left container strategy-wrap bordered-section">
+
+        <!-- TITLE -->
+        <h2 class="text-center fw-bold text animate left py-2">
+            Chatbots Work Flow
+        </h2><br><br>
+
+        <div class="strategy-inner">
+
+            <!-- LEFT COLUMN (Step 1, 2, 3) -->
+            <div class="grid-col left-col">
+
+                <!-- Step 1 -->
+                <article class="card-like purple" data-step="1">
+                    <span class="step-tag">Step 1</span>
+                    <div class="icon-wrap"><i data-lucide="goal"></i></div>
+                    <h3>Discovery</h3>
+                    <p>Analyze communication flows and operations to identify automation opportunities.</p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="card-like" data-step="2">
+                    <span class="step-tag">Step 2</span>
+                    <div class="icon-wrap"><i data-lucide="search-check"></i></div>
+                    <h3>AI Flow Design</h3>
+                    <p>Build conversational flows, voice scripts and automation logic.</p>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="card-like purple" data-step="3">
+                    <span class="step-tag">Step 3</span>
+                    <div class="icon-wrap"><i data-lucide="clipboard-edit"></i></div>
+                    <h3>Implementation</h3>
+                    <p>Deploy chatbots, voice bots and workflows with system integrations.</p>
+                </article>
+
+            </div>
+
+            <!-- CENTER IMAGE -->
+            <div class="robot-col">
+                <div class="robot-wrap">
+                    <img src="/Assets/Design robot.jpg" class="robot img-fluid" alt="">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN (Step 4, 5, 6) -->
+            <div class="grid-col right-col">
+
+                <!-- Step 4 -->
+                <article class="card-like purple" data-step="4">
+                    <span class="step-tag">Step 4</span>
+                    <div class="icon-wrap"><i data-lucide="image"></i></div>
+                    <h3>Analytics Setup</h3>
+                    <p>Connect business data for reporting and insights.</p>
+                </article>
+
+                <!-- Step 5 -->
+                <article class="card-like" data-step="5">
+                    <span class="step-tag">Step 5</span>
+                    <div class="icon-wrap"><i data-lucide="share-2"></i></div>
+                    <h3>Testing & Optimization</h3>
+                    <p>Fine-tune accuracy, tone, performance and conversions.</p>
+                </article>
+
+                <!-- Step 6 -->
+                <article class="card-like purple" data-step="6">
+                    <span class="step-tag">Step 6</span>
+                    <div class="icon-wrap"><i data-lucide="trending-up"></i></div>
+                    <h3>Launch & Continuous Improvement </h3>
+                    <p>Go live and expand features as the business grows.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+        <!-- ⭐ STEP 7 (Center Bottom) -->
+        <div class="bottom-center-card">
+            <article class="card-like purple" data-step="7">
+                <span class="step-tag">Step 7</span>
+                <div class="icon-wrap"><i data-lucide="check-circle"></i></div>
+                <h3>Delivery & Collaborate</h3>
+                <p>Share designs and gather feedback for smooth project completion.</p>
+            </article>
+        </div><br>
+
+    </section> <br>
+
+    <!-- What we can Automate Section -->
+    <section class="animate left about-section py-2">
+        <div class="container">
+            <!-- Heading -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="fw-bold mb-4 text">What we can Automate ?</h2>
+                </div>
+            </div>
+
+            <!-- Content Paragraphs -->
+            <div class="row">
+                <div class="paragraph col-12">
+                    <p>
+                        Customer support (text + voice), appointment scheduling, lead qualification and nurturing,
+                        payment reminders and invoicing, order tracking and updates, customer onboarding, internal
+                        notifications, and data processing with reporting all work together to streamline operations and
+                        deliver a smoother, more efficient customer experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+
+    <!-- Hero Section -->
+    <section class="animate left container mission position-relative text-white">
+        <div class="container position-relative z-2 py-5">
+            <div class="row">
+                <div class="col-lg-7 col-md-10">
+                    <h1 class="fw-bold mb-3" style="font-family: 'Orbitron', sans-serif;">
+                        Technology You Can Trust
+                    </h1>
+                    <p class="mb-4">
+                        AI-powered chatbots, voice AI automation, and workflow automation work seamlessly together to
+                        enhance efficiency, while secure Swiss cloud infrastructure ensures data protection. With API
+                        and CRM integrations combined with powerful analytics dashboards, businesses gain a fully
+                        connected, insight-driven system for smarter operations.
+                    </p>
+                    <!-- <a href="/Pages/contact.html" class="btn-modern filled ai-glow">
+                        <span>Contact</span>
+                        <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <style>
+        .mission {
+            background: url('/Assets/chatbt\ banner.jpg') center center/cover no-repeat;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* needed for overlay */
+        }
+
+        /* Dark overlay */
+        .mission::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        /* Ensure container content is above the overlay */
+        .mission>.container {
+            position: relative;
+            z-index: 2;
+            /* makes text and stats visible above overlay */
+        }
+
+        /* Hero button */
+        .mission-btn {
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mission-btn:hover {
+            background: #a000d6;
+            color: #fff;
+        }
+
+        .mission-btn .icon {
+            background: #a000d6;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .mission-btn:hover .icon {
+            background: #fff;
+            color: #a000d6;
+        }
+
+        /* Stats */
+        .mission-stats {
+            z-index: 2;
+            /* ensure counts appear above overlay */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem 0;
+        }
+
+        .mission-stats h3 {
+            font-size: 2rem;
+            color: #fff;
+            /* ensure counts are white */
+        }
+
+        .mission-stats p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: #fff;
+            /* ensure text is white */
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .mission-stats {
+                flex-direction: row;
+                justify-content: center !important;
+            }
+
+            .mission-stats div {
+                flex: 1 1 40%;
+            }
+
+            .mission {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mission-stats h3 {
+                font-size: 1.4rem;
+            }
+
+            .mission {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .mission-stats div {
+                flex: 1 1 100%;
+            }
+
+            .mission {
+                width: 90%;
+            }
+        }
+    </style>
+
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        (function () {
+            const state = { moved: false, originals: new Map() };
+
+            function saveOriginal(el) {
+                if (!state.originals.has(el)) {
+                    state.originals.set(el, { parent: el.parentNode, nextSibling: el.nextSibling });
+                }
+            }
+
+            function reorderForMobile() {
+                const mobile = window.innerWidth <= 768;
+                const strategyInner = document.querySelector('.strategy-inner');
+                const robotCol = document.querySelector('.robot-col');
+                const allCards = Array.from(document.querySelectorAll('.card-like'));
+
+                if (mobile && !state.moved) {
+                    allCards.forEach(saveOriginal);
+                    saveOriginal(robotCol);
+
+                    let mobileStack = document.createElement('div');
+                    mobileStack.className = "mobile-stack";
+                    mobileStack.style.display = "flex";
+                    mobileStack.style.flexDirection = "column";
+                    mobileStack.style.gap = "16px";
+
+                    const sorted = allCards.sort((a, b) =>
+                        parseInt(a.dataset.step) - parseInt(b.dataset.step)
+                    );
+
+                    sorted.forEach(card => mobileStack.appendChild(card));
+
+                    const leftCol = document.querySelector('.left-col');
+                    strategyInner.insertBefore(robotCol, leftCol.nextSibling);
+                    strategyInner.insertBefore(mobileStack, robotCol.nextSibling);
+
+                    state.moved = true;
+                }
+
+                if (!mobile && state.moved) {
+                    for (let [el, pos] of state.originals.entries()) {
+                        pos.parent.insertBefore(el, pos.nextSibling);
+                    }
+
+                    document.querySelector('.mobile-stack')?.remove();
+                    state.moved = false;
+                }
+            }
+
+            window.addEventListener('DOMContentLoaded', reorderForMobile);
+            window.addEventListener('resize', () => setTimeout(reorderForMobile, 150));
+
+            const cards = document.querySelectorAll('.card-like');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            cards.forEach(card => observer.observe(card));
+        })();
+    </script>
+
+
+    <br>
+    <section class="animate left d-flex align-items-center justify-content-center text-center py-4 bg-white">
         <div class="container px-3">
             <h1 class="fw-bold mb-4 responsive-heading" style="background: linear-gradient(90deg, #7a2ba4, #e41165);
                -webkit-background-clip: text;
                -webkit-text-fill-color: transparent;
                font-family: 'Orbitron', sans-serif;
                line-height: 1.3;">
-                Your goals, turned into<br>
-                measurable performance<br>
-                results.<br>
-           
+                Let’s build an automation system <br>
+                perfectly tailored to your <br>
+                business.<br>
             </h1>
 
 
@@ -675,12 +748,8 @@
                 <span class="circle"><i class="bi bi-arrow-up-right"></i></span>
             </a>
 
-
-
         </div>
     </section>
-
-
 
 
 
@@ -710,6 +779,7 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
                 }
             });
         </script>
+
 
 
 
@@ -995,18 +1065,6 @@ I’m interested in subscribing to your newsletter. My email is: ${email}`);
                 }
             }
         </style>
-
-
-
-
-
-
-
-
-
-
-
-
 
     </section>
 
