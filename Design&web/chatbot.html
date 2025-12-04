@@ -168,9 +168,11 @@
                         style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="fw-bold">AI Chatbots (Text)</h5>
-                        <p class="text-muted mb-0">We craft interfaces rooted in deep user research, ensuring every
-                            click feels intuitive aOmnichannel assistants for WhatsApp, Instagram, Facebook, websites
-                            and more delivering instant, accurate responses 24/7.</p>
+                        <p class="text-muted mb-0">This is where “Chatbot Development (Text)” goes:
+                            WhatsApp, Instagram, Facebook, Website widget
+                            Custom AI chat assistants
+                            24/7 automated responses
+                        </p>
                     </div>
                 </div>
 
@@ -180,19 +182,28 @@
                         style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="fw-bold">Voice AI Assistants</h5>
-                        <p class="text-muted mb-0">Natural, human-sounding voice bots that handle calls, inquiries,
-                            reservations, reminders and customer support.</p>
+                        <p class="text-muted mb-0">This is where “Chatbot Development (Voice)” fits:
+                            Voice bots for calls, reservations, reminders
+                            Natural, human-sounding responses
+                        </p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                <!-- ⭐ Card 3 (Scrollable on Hover) -->
+                <div class="card border-0 shadow-sm flex-shrink-0 long-card" style="width: 300px; border-radius: 20px;">
                     <img src="/Assets/Rapid Prototyping & Testing.jpg" class="card-img-top" alt="Responsive Design"
                         style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
-                    <div class="card-body">
+
+                    <div class="card-body scroll-on-hover">
                         <h5 class="fw-bold">Business Process Automation</h5>
-                        <p class="text-muted mb-0">Automated workflows that eliminate repetitive tasks: follow-ups,
-                            confirmations, reminders, internal coordination, onboarding.</p>
+
+                        <p class="text-muted mb-0 card-long-text">
+                            <b>Automation & Integrations</b>
+                            (automated flows for customer service, leads, bookings, payments, reminders, follow-ups,
+                            onboarding)<br><br>
+                            <b>AI Workflow Optimization </b>
+                            (no-code/low-code automations, internal workflows, reduced manual work)
+                        </p>
                     </div>
                 </div>
 
@@ -203,8 +214,8 @@
                         style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="fw-bold">Brand-Integrated Visual Systems</h5>
-                        <p class="text-muted mb-0">Cohesive, on-brand design systems that not only look great but stay
-                            consistent as you scale.</p>
+                        <p class="text-muted mb-0">Cohesive, on-brand design systems that stay consistent as you scale.
+                        </p>
                     </div>
                 </div>
 
@@ -214,13 +225,40 @@
                         style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="fw-bold">Business Intelligence & Analytics</h5>
-                        <p class="text-muted mb-0">We transform raw data into actionable insights: sales performance,
-                            customer behavior, trends, segments, churn detection and growth opportunities.</p>
+                        <p class="text-muted mb-0">Customer behavior insights, performance metrics, and basic reporting.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card  6-->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/Automate Marketing.jpg" class="card-img-top" alt="Cloud Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">CRM Setup & Automations</h5>
+                        <p class="text-muted mb-0">We organize pipelines, set automation rules, and structure your CRM
+                            to support your sales and customer communication.
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card  7-->
+                <div class="card border-0 shadow-sm flex-shrink-0" style="width: 300px; border-radius: 20px;">
+                    <img src="/Assets/API & Backend Integration.jpg" class="card-img-top" alt="Cloud Integration"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="fw-bold">API Integrations</h5>
+                        <p class="text-muted mb-0">We integrate WhatsApp API, booking systems, email and payment tools
+                            to keep all your systems connected.
+
+                        </p>
                     </div>
                 </div>
 
             </div>
         </div>
+
     </section><br>
 
 
@@ -240,6 +278,26 @@
     </script>
 
     <style>
+        /* Scroll only for Card 3 */
+        .long-card .scroll-on-hover {
+            max-height: 150px;
+            /* Limit visible area */
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Scrollbar appears on hover */
+        .long-card:hover .scroll-on-hover {
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+
+        /* Optional: smoother text spacing */
+        .card-long-text {
+            line-height: 1.4;
+        }
+
         .scroll-container {
             overflow-x: auto;
             scroll-behavior: smooth;
@@ -294,7 +352,7 @@
 
                 <!-- Right Image -->
                 <div class="col-lg-6 text-center">
-                    <img src="/Assets/SEO Smoll banner.png" alt="SEO Illustration"
+                    <img src="/Assets/Why Intelligent Automation.jpg" alt="SEO Illustration"
                         class="img-fluid rounded-4 shadow-sm seo-img">
                 </div>
 
@@ -476,12 +534,12 @@
     </section> <br>
 
     <!-- What we can Automate Section -->
-    <section class="animate left about-section py-2">
+    <section class="animate left about-section py-3">
         <div class="container">
             <!-- Heading -->
             <div class="row">
                 <div class="col-12">
-                    <h2 class="fw-bold mb-4 text">What we can Automate ?</h2>
+                    <h2 class="fw-bold  text">What we can Automate ?</h2>
                 </div>
             </div>
 
@@ -493,6 +551,7 @@
                         payment reminders and invoicing, order tracking and updates, customer onboarding, internal
                         notifications, and data processing with reporting all work together to streamline operations and
                         deliver a smoother, more efficient customer experience.
+                        
                     </p>
                 </div>
             </div>
@@ -528,7 +587,7 @@
 
     <style>
         .mission {
-            background: url('/Assets/chatbt\ banner.jpg') center center/cover no-repeat;
+            background: url('/Assets/Technology\ You\ Can\ Trust.jpg') center center/cover no-repeat;
             border-radius: 20px;
             overflow: hidden;
             height: 400px;
